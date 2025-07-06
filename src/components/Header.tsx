@@ -43,7 +43,7 @@ export function Header() {
       <motion.div
       whileHover={{ scale: 1.05 }}
         transition={{ type: "spring", stiffness: 300 }}
-      className="flex items-center space-x-2 text-xl">
+      className="flex items-center space-x-2 z-30 text-xl">
         <div className="w-8 h-8 flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ export function Header() {
             <path d="M64 96c0-35.3 28.7-64 64-64l384 0c35.3 0 64 28.7 64 64l0 256-64 0 0-256L128 96l0 256-64 0L64 96zM0 403.2C0 392.6 8.6 384 19.2 384l601.6 0c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8L76.8 480C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z" />
           </svg>
         </div>
-        <span className="text-2xl font-bold">Rehan</span>
+        <span className="text-3xl font-bold">Rehan</span>
       </motion.div>
 
       {/* Menu Button */}
@@ -111,8 +111,10 @@ export function Header() {
             {navItems.map((nav,idx) => (
                 <Link href={nav.href} key={idx} className={`${!nav.showOnDesktop && "md:hidden" }`}>
               <motion.div
+              initial={{opacity: 0,x: 30}}
+              animate={{opacity: 1, x:0 }}
                 whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                transition={{delay: 0.25 * idx , type: "spring", stiffness: 200, damping:20 }}
                 className="flex justify-center items-end gap-1  cursor-pointer group text-gray-50 hover:text-emerald-300"
               >
                 <TerminalIcon
