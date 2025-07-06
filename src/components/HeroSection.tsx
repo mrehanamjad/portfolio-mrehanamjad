@@ -12,7 +12,7 @@ export function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
-        👋 Hello, I'm
+        👋 Hello, I&apos;m
       </motion.p>
 
       <motion.h1
