@@ -4,9 +4,9 @@ import { useState, useEffect } from "react"
 import { motion, useSpring, useMotionValue } from "framer-motion"
 
 export default function BackgroundLayout({children}:{children: React.ReactNode;}) {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isClicking, setIsClicking] = useState(false)
-  const [isHovering, setIsHovering] = useState(true)
+  // const [isHovering, setIsHovering] = useState(true)
 
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
@@ -17,7 +17,7 @@ export default function BackgroundLayout({children}:{children: React.ReactNode;}
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
+      // setMousePosition({ x: e.clientX, y: e.clientY })
       mouseX.set(e.clientX)
       mouseY.set(e.clientY)
     }
@@ -81,7 +81,8 @@ export default function BackgroundLayout({children}:{children: React.ReactNode;}
           translateY: "-50%",
           boxShadow: "0 0 40px rgba(34, 197, 94, 0.7), 0 0 80px rgba(34, 197, 94, 0.4)",
         }}
-        animate={isClicking ? "clicking" : isHovering ? "hovering" : "default"}
+        // animate={isClicking ? "clicking" : isHovering ? "hovering" : "default"}
+        animate={isClicking ? "clicking" : "default"}
         variants={glowVariants}
         transition={{ type: "spring", ...springConfig }}
       />

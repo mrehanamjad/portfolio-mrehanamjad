@@ -21,7 +21,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
-          We're here to bring <span className="text-green-400">your vision to life.</span>
+          We&apos;re here to bring <span className="text-green-400">your vision to life.</span>
         </motion.h1>
 
         <motion.p
@@ -30,7 +30,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
         >
-          Let's get to know each other
+          Let&apos;s get to know each other
         </motion.p>
 
         <motion.div
