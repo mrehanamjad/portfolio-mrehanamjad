@@ -1,4 +1,5 @@
 import { HeroSection } from '@/components/HeroSection'
+import SocialCards from '@/components/SocialCards'
 import React from 'react'
 
 function Home() {
@@ -6,6 +7,7 @@ function Home() {
     <div>
 
       <HeroSection />
+      <SocialCards />
     </div>
   )
 }
