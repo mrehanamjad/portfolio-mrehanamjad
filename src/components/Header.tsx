@@ -107,14 +107,19 @@ export function Header() {
             className="fixed flex flex-col gap-8  justify-evenly items-center  top-0 left-0 w-full h-screen z-20 bg-white/25 backdrop-blur-md border border-white/20 shadow-lg"
           >
             <div></div>
-            <div className="flex flex-col items-start gap-7 justify-center">
+            <motion.div
+            initial={{opacity:0}}
+            animate={{opacity:1}}
+            exit={{opacity:0}}
+            transition={{delay:0.5}}
+            className="flex flex-col items-start gap-7 justify-center">
             {navItems.map((nav,idx) => (
                 <Link href={nav.href} key={idx} className={`${!nav.showOnDesktop && "md:hidden" }`}>
               <motion.div
-              initial={{opacity: 0,x: 30}}
-              animate={{opacity: 1, x:0 }}
+              initial={{opacity: 0,y: -20}}
+              animate={{opacity: 1, y:0 }}
                 whileHover={{ scale: 1.05 }}
-                transition={{delay: 0.25 * idx , type: "spring", stiffness: 200, damping:20 }}
+                transition={{delay: 0.2 * idx , type: "spring", stiffness: 200, damping:20 }}
                 className="flex justify-center items-end gap-1  cursor-pointer group text-gray-50 hover:text-emerald-300"
               >
                 <TerminalIcon
@@ -127,7 +132,7 @@ export function Header() {
               </motion.div>
               </Link>
             ))}
-            </div>
+            </motion.div>
             <div></div>
           </motion.div>
         )}
