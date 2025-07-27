@@ -1,15 +1,22 @@
-import { HeroSection } from '@/components/HeroSection'
-import SocialCards from '@/components/SocialCards'
-import React from 'react'
+import AboutMe from "@/components/AboutMe";
+import HeroSection from "@/components/HeroSection";
+import { HeroSectionSm } from "@/components/HeroSectionSm";
+import SocialCardsSection from "@/components/Socials/SocialCardsSection";
+import React from "react";
 
 function Home() {
   return (
     <div>
-
+      <div className="max-lg:hidden">
       <HeroSection />
-      <SocialCards />
+      </div>
+      <div className="lg:hidden">
+      <HeroSectionSm />
+      </div>
+      <SocialCardsSection />
+      <AboutMe />
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
