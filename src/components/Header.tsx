@@ -184,7 +184,10 @@ export function Header() {
         <div className="flex flex-col items-start gap-7 justify-center">
           {navItems.map((nav, idx) => (
             <Link href={nav.href} key={idx} className={`${!nav.showOnDesktop && "md:hidden"}`}>
-              <div className="nav-item flex justify-center items-end gap-1 cursor-pointer group text-gray-50 hover:text-emerald-500">
+              <div 
+                onMouseEnter={() => gsap.to("#cursor", { scale: 8, duration: 0.3 })}
+                onMouseLeave={() => gsap.to("#cursor", { scale: 1, duration: 0.3 })}
+              className="nav-item flex  justify-center items-end gap-1 cursor-pointer group text-gray-50 hover:text-emerald-500">
                 <TerminalIcon
                   size={62}
                   className="transition-colors duration-300"

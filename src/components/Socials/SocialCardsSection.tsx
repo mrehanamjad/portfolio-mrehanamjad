@@ -26,8 +26,8 @@ function SocialCardsSection() {
             scale: 1,
             scrollTrigger: {
               trigger: card,
-              start: "top 100%",
-              end: "top 90%",
+              start: "top 95%",
+              end: "top 75%",
               scrub: true,
             },
             ease: "power1.out",

@@ -10,6 +10,10 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-bebasneue: var(--font-bebas-neue);
+  --font-inter: var(--font-inter);
+  --font-raleway: var(--font-raleway);
+  --font-hubot-sans: var(--font-hubot-sans)
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,12 +26,13 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-hubot-sans) ,Arial, Helvetica, sans-serif;
+  cursor: default;
 }
 
 .text-outline-my {
-  -webkit-text-stroke: 2px green; /* change color & width as needed */
-  color: transparent;
+  -webkit-text-stroke: 2px oklch(59.6% 0.145 163.225); /* change color & width as needed */
+  color: oklch(60.307% 0.13444 160.95 / 0.116);
   font-weight: 900;
 }
 
