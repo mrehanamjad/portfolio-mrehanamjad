@@ -15,6 +15,7 @@ function Home() {
       </div>
       <SocialCardsSection />
       <AboutMe />
+      {/* <div className="w-full h-screen"></div> */}
     </div>
   );
 }
