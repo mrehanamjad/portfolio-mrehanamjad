@@ -1,5 +1,5 @@
 import { ChevronDown } from "lucide-react";
-import TypeWrite from "./TypeWrite";
+import TypeWrite from "./text-animations/TypeWrite";
 
 export function HeroSectionSm() {
   return (

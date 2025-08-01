@@ -1,5 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Bebas_Neue, Inter, Raleway,Hubot_Sans } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Bebas_Neue,
+  Inter,
+  Raleway,
+  Hubot_Sans,
+  Dancing_Script,
+  Oswald
+} from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import Cursor from "@/components/Cursor";
@@ -30,12 +39,22 @@ const inter = Inter({
 const raleway = Raleway({
   subsets: ["latin"],
   variable: "--font-raleway",
-})
+});
 
 const hubotSans = Hubot_Sans({
   subsets: ["latin"],
   variable: "--font-hubot-sans",
-})
+});
+
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  variable: "--font-dancing-script",
+});
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  variable: "--font-oswald",
+});
 
 export const metadata: Metadata = {
   title: "Full Stack Portfolio",
@@ -50,9 +69,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${inter.variable} ${raleway.variable} ${hubotSans.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${inter.variable} ${raleway.variable} ${hubotSans.variable} ${dancingScript.variable} ${oswald.variable}`}
     >
-      <body className="font-inter antialiased">
+      <body className="font-inter antialiased bg-[#131313]">
         <Cursor />
         <Header />
         <main>{children}</main>

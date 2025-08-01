@@ -13,7 +13,9 @@
   --font-bebasneue: var(--font-bebas-neue);
   --font-inter: var(--font-inter);
   --font-raleway: var(--font-raleway);
-  --font-hubot-sans: var(--font-hubot-sans)
+  --font-hubot-sans: var(--font-hubot-sans);
+  --font-dancing-script: var(--font-dancing-script);
+  --font-oswald: var(--font-oswald);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,13 +28,13 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-hubot-sans) ,Arial, Helvetica, sans-serif;
+  font-family: var(--font-oswald) ,Arial, Helvetica, sans-serif;
   cursor: default;
 }
 
 .text-outline-my {
   -webkit-text-stroke: 2px #009966; /* change color & width as needed */
-  color: oklch(60.307% 0.13444 160.95 / 0.274);
+  color: rgba(0, 153, 102, 0.274);
   font-weight: 900;
 }
 
@@ -114,4 +116,9 @@ body {
 
 .herosm-scroll:active {
   transform: scale(0.95);
+}
+
+
+.heroclipTest {
+  clip-path: circle(2% at 50% 50%);
 }

@@ -39,6 +39,7 @@ function SocialCardsSection() {
   );
 
   return (
+    <section className="w-full h-full ">
     <div
       ref={scrollRef}
       className="grid grid-cols-3 md:grid-cols-7  h-4xl py-30 px-4 md:gap-2 max-md:space-y-2 max-w-6xl w-full mx-auto"
@@ -68,6 +69,7 @@ function SocialCardsSection() {
         plateFormNameColor="max-md:text-gray-200 md:group-hover:text-gray-300"
       />
     </div>
+    </section>
   );
 }
 
