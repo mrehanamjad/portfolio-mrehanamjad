@@ -69,6 +69,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      
       className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${inter.variable} ${raleway.variable} ${hubotSans.variable} ${dancingScript.variable} ${oswald.variable}`}
     >
       <body className="font-inter antialiased bg-[#131313]">

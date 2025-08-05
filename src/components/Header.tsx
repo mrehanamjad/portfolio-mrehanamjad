@@ -1,6 +1,5 @@
 "use client";
 
-import { Layers2Icon, TerminalIcon, X } from "lucide-react";
 import { useState } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -8,7 +7,8 @@ import Link from "next/link";
 import SocialCard from "./Socials/SocialCard";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import { HiMenu, HiOutlineMenu, HiOutlineMenuAlt1, HiOutlineMenuAlt3 } from "react-icons/hi";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { AiOutlineClose } from "react-icons/ai";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -79,23 +79,20 @@ export function Header() {
 
   useGSAP(
     () => {
-      const dropdown = document.querySelector(".dropdown-menu");
-      const menuIcon = document.querySelector(".menu-icon");
-      const navItems = document.querySelectorAll(".nav-item");
 
       if (menuOpen) {
         // Show dropdown animation
-        gsap.set(dropdown, { display: "flex" });
+        gsap.set(".dropdown-menu", { display: "flex" });
 
         const tl = gsap.timeline();
 
-        tl.to(dropdown, {
+        tl.to(".dropdown-menu", {
           y: "0%",
           opacity: 1,
           duration: 0.5,
           ease: "power2.out",
         }).fromTo(
-          navItems,
+          ".nav-item",
           {
             opacity: 0,
             y: -20,
@@ -103,16 +100,35 @@ export function Header() {
           {
             opacity: 1,
             y: 0,
-            duration: 0.4,
-            stagger: 0.2,
+            duration: 0.3,
+            stagger: 0.1,
             ease: "back.out(1.7)",
           },
           "-=0.2"
-        );
+        ).fromTo(".nav-social-card", {
+            opacity: 0,
+            x: 50,
+            scale: 0.8,
+          },
+          {
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            duration: 0.2,
+            stagger: 0.1,
+            ease: "back.out(1.7)",
+          },
+          "-=0.3"
+        ).to(".dropdown-menu",{
+          border: 4,
+          duration: 0.15,
+          ease: "power2.inOut"
+          
+        },"-=0.6")
 
         // Menu icon rotation
         gsap.fromTo(
-          menuIcon,
+          ".menu-icon",
           {
             opacity: 0,
             rotation: -90,
@@ -127,14 +143,25 @@ export function Header() {
         // Hide dropdown animation
         const tl = gsap.timeline();
 
-        tl.to(navItems, {
+        tl.to(".nav-social-card", {
+          opacity: 0,
+          x: 30,
+          scale: 0.8,
+          duration: 0.2,
+          stagger: 0.05,
+          ease: "power2.in",
+        }).to(".nav-item", {
           opacity: 0,
           y: -20,
           duration: 0.2,
           stagger: 0.05,
         })
-          .to(
-            dropdown,
+          .to(".dropdown-menu",{
+          border: 0,
+          duration: 0.15,
+          ease: "power2.inOut"
+        },"-=0.1").to(
+            ".dropdown-menu",
             {
               y: "-100%",
               opacity: 0,
@@ -143,11 +170,11 @@ export function Header() {
             },
             "-=0.1"
           )
-          .set(dropdown, { display: "none" });
+          .set(".dropdown-menu", { display: "none" });
 
         // Menu icon rotation
         gsap.fromTo(
-          menuIcon,
+          ".menu-icon",
           {
             opacity: 0,
             rotation: 90,
@@ -169,19 +196,6 @@ export function Header() {
 
   return (
     <div className="fixed w-fit right-0  opacity-0 animate-header-my z-40 bg-transparent flex items-center justify-between p-4 py-5 md:px-10 rounded-xl overflow-hidden">
-      {/* Logo */}
-      {/* <div className="logo flex items-center space-x-2 z-30 text-xl cursor-pointer">
-        <div className="w-8 h-8 flex items-center justify-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="white"
-            viewBox="0 0 640 512"
-          >
-            <path d="M64 96c0-35.3 28.7-64 64-64l384 0c35.3 0 64 28.7 64 64l0 256-64 0 0-256L128 96l0 256-64 0L64 96zM0 403.2C0 392.6 8.6 384 19.2 384l601.6 0c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8L76.8 480C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z" />
-          </svg>
-        </div>
-        <span className="text-3xl font-bold">Rehan</span>
-      </div> */}
 
       {/* Menu Button */}
       <button
@@ -190,9 +204,9 @@ export function Header() {
       >
         <div className="menu-icon ">
           {menuOpen ? (
-            <X size={40} className="text-white -mr-2" />
+            <AiOutlineClose size={40} className="text-white -mr-1 group-hover:rotate-12" />
           ) : (
-            <HiOutlineMenuAlt3 size={40}   className="text-white" />
+            <HiOutlineMenuAlt3 size={40}   className="text-white -mr-1 group-hover:rotate-12"  />
           )}
         </div>
         <span className="relative transition-colors  duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-emerald-500 after:transition-all after:duration-300 group-hover:after:w-full">
@@ -200,11 +214,14 @@ export function Header() {
         </span>
       </button>
 
-      {/* Contact Button (hidden on small screens) */}
-
       {/* Drop-down Glass Panel */}
-      <div className="dropdown-menu  fixed flex-col gap-8 justify-evenly items-center top-0 left-0 w-full h-screen z-20 bg-black  border-2 border-white shadow-lg">
-        <div className="w-full h-full mt-8 flex flex-col md:flex-row justify-evenly p-8 md:items-center">
+      <div className=" dropdown-menu  fixed flex-col gap-8 justify-evenly items-center top-0 left-0 w-full h-screen z-20 bg-black  border-0 border-white shadow-lg">
+           {/* Logo */}
+      <div className="absolute left-5 top-5 md:top-8 md:left-8 flex items-center flex-col max-md:-space-y-1 space-x-2 z-30 text-xl cursor-pointer">
+        <span className=" md:text-3xl font-semibold font-dancing-script -rotate-6">M.Rehan_</span>
+        <span className=" md:text-3xl font-semibold font-dancing-script -rotate-6">_Amjad</span>
+      </div>
+        <div className="w-full h-full mt-14 flex flex-col md:flex-row justify-evenly p-8 md:items-center">
           <div className="flex flex-col items-start gap-2 md:gap-4 justify-center">
             {navItems.map((nav, idx) => (
               <Link
@@ -226,7 +243,7 @@ export function Header() {
         plateFormIcon={SiGmail}
         name="rehanamjad520@gmail.com"
         userName=""
-        className="py-5 px-6  md:border-white border-3 rounded-md lg:hover:bg-[#bb001cd3] lg:hover:border-red-500 min-w-80 w-full"
+        className="nav-social-card py-5 px-6  md:border-white border-3 rounded-md lg:hover:bg-[#bb001cd3] lg:hover:border-red-500 min-w-80 w-full"
         plateFormNameColor="max-md:text-red-600 md:group-hover:text-red-400"
       />
       <SocialCard
@@ -234,7 +251,7 @@ export function Header() {
         plateFormIcon={FaLinkedinIn}
         name="M.Rehan Amjad"
         userName="/in/mrehanamjad"
-        className="py-4 px-6 md:border-white border-3 rounded-md lg:hover:bg-[#103b6a] lg:hover:border-sky-700 min-w-80 w-full"
+        className="nav-social-card py-4 px-6 md:border-white border-3 rounded-md lg:hover:bg-[#103b6a] lg:hover:border-sky-700 min-w-80 w-full"
         plateFormNameColor="max-md:text-sky-700 md:group-hover:text-sky-500"
       />
       <SocialCard
@@ -242,7 +259,7 @@ export function Header() {
         plateFormName="Github"
         name="M.RehanAmjad"
         userName="/mrehanamjad"
-        className="py-4 px-6  md:border-white border-3 rounded-md  lg:hover:bg-[#161b22] lg:hover:border-white/30 min-w-80 w-full"
+        className="nav-social-card py-4 px-6  md:border-white border-3 rounded-md  lg:hover:bg-[#161b22] lg:hover:border-white/30 min-w-80 w-full"
         plateFormNameColor=" max-md:text-gray-200 md:group-hover:text-gray-300"
       />
           </div>

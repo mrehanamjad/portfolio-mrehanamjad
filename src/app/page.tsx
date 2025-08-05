@@ -1,20 +1,18 @@
-import AboutMe from "@/components/aboutMe/AboutMe";
-import BackgroundLayout from "@/components/BackgroundLayout";
-import HeroSection from "@/components/HeroSection";
-import HeroSection2 from "@/components/HeroSection2";
-import HeroSection3 from "@/components/HeroSection3";
-import { HeroSectionSm } from "@/components/HeroSectionSm";
-import SocialCardsSection from "@/components/Socials/SocialCardsSection";
 import React from "react";
+import HeroPlusAbout from "@/components/HeroPlusAbout";
+import SkillsSection from "@/components/SkillsSection";
+import ProjectSection from "@/components/ProjectSection";
 
 function Home() {
   return (
     <div className="bg-[#131313]">
-      <HeroSection3 />
+      <HeroPlusAbout />
 
       {/* <SocialCardsSection />
       <AboutMe /> */}
       {/* <div className="w-full h-screen"></div> */}
+      <SkillsSection />
+      <ProjectSection />
     </div>
   );
 }
