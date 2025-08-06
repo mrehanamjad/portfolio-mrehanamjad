@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import { useRef } from "react";
@@ -8,9 +6,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
-import { BiLogoGithub } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa6";
-import { LuArrowBigRightDash, LuArrowUpRight } from "react-icons/lu";
+import { LuArrowUpRight } from "react-icons/lu";
 
 gsap.registerPlugin(ScrollTrigger);
 

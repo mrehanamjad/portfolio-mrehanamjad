@@ -1,6 +1,5 @@
-import { FaReact } from "react-icons/fa6";
 import { RiNextjsFill } from "react-icons/ri";
-import { SiExpress, SiFastapi, SiGreensock, SiJsonwebtokens, SiTailwindcss } from "react-icons/si";
+import { SiExpress, SiFastapi, SiGreensock} from "react-icons/si";
 import { IconType } from "react-icons";
 import {
   BiLogoCss3,
@@ -14,8 +13,6 @@ import {
   BiLogoTailwindCss,
   BiLogoTypescript,
 } from "react-icons/bi";
-import { Settings2Icon, SettingsIcon } from "lucide-react";
-import { IoSettings } from "react-icons/io5";
 import { IoMdSettings } from "react-icons/io";
 
 interface skillI {
@@ -25,7 +22,7 @@ interface skillI {
   imgSrc: string;
 }
 
-export const skillData = [
+export const skillData:skillI[][] = [
   [
     {
       name: "Python",

@@ -11,7 +11,6 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
-import Cursor from "@/components/Cursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -73,7 +72,6 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${inter.variable} ${raleway.variable} ${hubotSans.variable} ${dancingScript.variable} ${oswald.variable}`}
     >
       <body className="font-inter antialiased bg-[#131313]">
-        <Cursor />
         <Header />
         <main>{children}</main>
       </body>

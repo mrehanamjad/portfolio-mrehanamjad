@@ -62,15 +62,9 @@ function HeroPlusAbout() {
               <span>ME</span>
             </div>
             <p
-              // onMouseEnter={() =>
-              //   gsap.to("#cursor", { scale: 8, duration: 0.3 })
-              // }
-              // onMouseLeave={() =>
-              //   gsap.to("#cursor", { scale: 1, duration: 0.3 })
-              // }
               className="aboutme-text text-center hidden  text-balance text-gray-200 text-xl md:text-2xl lg:text-3xl font-semibold leading-relaxed"
             >
-              <span className="aboutme-text-piece">I'm a passionate Full-Stack Developer and AI </span>
+              <span className="aboutme-text-piece">I&apos;m a passionate Full-Stack Developer and AI </span>
               <span className="aboutme-text-piece">enthusiast focused on crafting elegant, fast, and </span>
               <span className="aboutme-text-piece">accessible digital experiences. With tools</span>
               <span className="aboutme-text-piece"> like Next.js, React, and Tailwind CSS,</span>
@@ -100,7 +94,7 @@ function HeroPlusAbout() {
           </h2>
           <p className="herosm-description animate-riseUp-my text-sm md:text-xl leading-relaxed w-4/5 md:w-2/3 font-light text-center text-balance">
             I build beautiful, functional, and user-friendly websites using
-            modern tech. Let's turn ideas into reality.
+            modern tech. Let&apos;s turn ideas into reality.
           </p>
           <div className="flex items-center max-md:flex-col max-md:gap-4 justify-center gap-6 mt-8">
             <ButtonWG>Contact</ButtonWG>

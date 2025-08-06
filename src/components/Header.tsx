@@ -57,7 +57,7 @@ export function Header() {
 
     // Nav items hover animations
     const navHoverTls: gsap.core.Timeline[] = [];
-    document.querySelectorAll(".nav-item").forEach((item, index) => {
+    document.querySelectorAll(".nav-item").forEach((item) => {
       gsap.set(item, { scale: 1 });
 
       const tl = gsap
