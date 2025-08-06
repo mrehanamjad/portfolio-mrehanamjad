@@ -10,7 +10,7 @@ export default Button;
 export const ButtonWG = ({children}:{children: React.ReactNode;}) => {
   return (
 <button
-  className="overflow-hidden w-40 p-2 h-16 bg-black text-white border-none rounded-full text-xl font-bold cursor-pointer relative z-10 group flex justify-center items-center"
+  className="overflow-hidden w-40 p-2 h-16 bg-zinc-200 text-black border-none rounded-full text-xl font-bold cursor-pointer relative z-10 group flex justify-center items-center"
 >{children}
   <span
     className="absolute w-44 h-40 -top-8 -left-2 bg-emerald-200 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-bottom"
@@ -22,7 +22,7 @@ export const ButtonWG = ({children}:{children: React.ReactNode;}) => {
     className="absolute w-44 h-40 -top-8 -left-2 bg-emerald-600 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-bottom"
   ></span>
   <span
-    className="group-hover:opacity-100  group-hover:duration-1000 duration-100 opacity-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex justify-center items-center"
+    className="group-hover:opacity-100 text-white  group-hover:duration-1000 duration-100 opacity-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex justify-center items-center"
     >{children === "Contact" ? "Connect" : children}</span>
 </button>
 

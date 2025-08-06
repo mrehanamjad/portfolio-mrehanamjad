@@ -5,7 +5,6 @@ import { ButtonWG } from "./Button";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
-import Image from "next/image";
 import { Boxes } from "./Background";
 
 gsap.registerPlugin(ScrollTrigger);
