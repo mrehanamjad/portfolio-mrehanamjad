@@ -83,7 +83,7 @@ function HeroPlusAbout() {
           style={{ "--clip": "100%" } as React.CSSProperties}
           className="absolute overflow-hidden heroclip z-10 bg-[#131313] top-0 left-0 h-full w-full flex flex-col gap-4 justify-center items-center pt-16"
         >
-          <Boxes />
+         
           <h3 className="-mb-2 herosm-greeting relative text-5xl md:text-8xl font-dancing-script bg-gradient-to-t from-black/40 via-white to-white inline-block text-transparent bg-clip-text font-bold">
             Hello, I am
           </h3>
