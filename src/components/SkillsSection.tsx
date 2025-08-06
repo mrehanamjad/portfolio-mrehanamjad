@@ -12,6 +12,7 @@ function SkillsSection() {
 
   useGSAP(()=>{
 
+    // Animate horizontal lines
     gsap.fromTo(".skill-h-line",{
       scaleX: 0
     },{
@@ -27,6 +28,63 @@ function SkillsSection() {
       },
     })
 
+    // Animate main heading "SKILLS"
+    gsap.fromTo(".skills-main-heading",{
+      y: 50,
+      opacity: 0
+    },{
+      y: 0,
+      opacity: 1,
+      duration: 0.8,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: "#skill-section-main-container",
+        start: "top 80%",
+        toggleActions: "play none play none",
+        once: true,
+      },
+    })
+
+    // Animate subtitle words with stagger
+    gsap.fromTo(".skills-subtitle-word",{
+      y: 100,
+      opacity: 0,
+      rotationX: 90,
+    },{
+      y: 0,
+      opacity: 1,
+      rotationX: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: "#skill-section-main-container",
+        start: "top 70%",
+        toggleActions: "play none none none",
+        once: true,
+      },
+    })
+
+    // Animate skill icons
+    gsap.fromTo(".skill-item",{
+      y: 30,
+      opacity: 0,
+      scale: 0.8,
+    },{
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      duration: 0.6,
+      stagger: 0.05,
+      ease: "back.out(1.7)",
+      scrollTrigger: {
+        trigger: "#skill-section-main-container",
+        start: "top 50%",
+        toggleActions: "play none none none",
+        once: true,
+      },
+    })
+
   })
 
   return (
@@ -34,12 +92,18 @@ function SkillsSection() {
       <Container>
         <div id="skill-section-main-container" className="h-full w-full ">
           <div className=" h-[60vh] flex flex-col justify-center items-center gap-4 md:gap-10">
-            <h2 className="text-4xl text-outline-my font-semibold ">SKILLS</h2>
+            <h2 className="skills-main-heading text-4xl text-outline-my font-semibold ">SKILLS</h2>
             <h3 className="text-5xl text-center md:text-8xl lg:text-9xl uppercase font-bold ">
-              <span className="bg-gradient-to-t from-black/40 via-white to-white inline-block text-transparent bg-clip-text">
-                Tools Of My
+              <span className="skills-subtitle-word bg-gradient-to-t from-black/40 via-white to-white inline-block text-transparent bg-clip-text">
+                Tools
               </span>{" "}
-              <span className="bg-gradient-to-t from-black/40 via-white to-white inline-block text-transparent bg-clip-text">
+              <span className="skills-subtitle-word bg-gradient-to-t from-black/40 via-white to-white inline-block text-transparent bg-clip-text">
+                Of
+              </span>{" "}
+              <span className="skills-subtitle-word bg-gradient-to-t from-black/40 via-white to-white inline-block text-transparent bg-clip-text">
+                My
+              </span>{" "}
+              <span className="skills-subtitle-word bg-gradient-to-t from-black/40 via-white to-white inline-block text-transparent bg-clip-text">
                 Trade
               </span>
             </h3>
@@ -51,7 +115,7 @@ function SkillsSection() {
                 {group.map((skill, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-center justify-center text-center text-sm md:text-base lg:text-lg text-white/80 hover:scale-105 transition-transform duration-200"
+                    className="skill-item flex flex-col items-center justify-center text-center text-sm md:text-base lg:text-lg text-white/80 hover:scale-105 transition-transform duration-200"
                   >
                     <skill.icon size={48} className="mb-2" />
                     <span>{skill.name}</span>

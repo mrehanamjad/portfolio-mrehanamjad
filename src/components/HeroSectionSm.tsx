@@ -1,5 +1,4 @@
-import { ChevronDown } from "lucide-react";
-import TypeWrite from "./text-animations/TypeWrite";
+import { BiChevronDown } from "react-icons/bi";
 
 export function HeroSectionSm() {
   return (
@@ -23,7 +22,7 @@ export function HeroSectionSm() {
         </p>
         
         <div className="herosm-scroll w-12 h-12 border-2 border-green-400 rounded-full flex items-center justify-center hover:bg-green-400/10 transition-colors cursor-pointer">
-          <ChevronDown className="w-6 h-6 text-green-400" />
+          <BiChevronDown className="w-6 h-6 text-green-400" />
         </div>
       </main>
     </>
