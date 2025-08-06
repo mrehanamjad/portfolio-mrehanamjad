@@ -115,9 +115,9 @@ function SkillsSection() {
                 {group.map((skill, index) => (
                   <div
                     key={index}
-                    className="skill-item flex flex-col items-center justify-center text-center text-sm md:text-base lg:text-lg text-white/80 hover:text-green-500 hover:scale-105 transition-transform duration-200"
+                    className="skill-item flex flex-col items-center justify-center text-center text-sm md:text-base lg:text-lg text-white/95 hover:text-green-500 hover:scale-105 transition-transform duration-200"
                   >
-                    <skill.icon size={48} className="mb-2" />
+                    <skill.icon size={skill.size} className="mb-2" />
                     <span>{skill.name}</span>
                   </div>
                 ))}

@@ -49,7 +49,7 @@ function SocialCardsSection() {
         plateFormIcon={SiGmail}
         name="rehanamjad520@gmail.com"
         userName=""
-        className="col-span-3 md:col-span-3 lg:hover:bg-[#bb001cd3] lg:hover:border-red-500"
+        className="col-span-3 md:col-span-3  lg:hover:border-red-500"
         plateFormNameColor="max-md:text-red-600 md:group-hover:text-red-400"
       />
       <SocialCard

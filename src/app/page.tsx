@@ -6,6 +6,7 @@ import ProjectSection from "@/components/ProjectSection";
 function Home() {
   return (
     <div className="bg-[#131313]">
+      
       <HeroPlusAbout />
 
       {/* <SocialCardsSection />
