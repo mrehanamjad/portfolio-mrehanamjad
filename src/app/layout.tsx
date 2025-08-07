@@ -7,7 +7,8 @@ import {
   Raleway,
   Hubot_Sans,
   Dancing_Script,
-  Oswald
+  Oswald,
+  Host_Grotesk
 } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
@@ -55,6 +56,11 @@ const oswald = Oswald({
   variable: "--font-oswald",
 });
 
+const hostGrotesk = Host_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-host-grotesk",
+})
+
 export const metadata: Metadata = {
   title: "Full Stack Portfolio",
   description: "Showcasing skills and projects",
@@ -69,7 +75,7 @@ export default function RootLayout({
     <html
       lang="en"
       
-      className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${inter.variable} ${raleway.variable} ${hubotSans.variable} ${dancingScript.variable} ${oswald.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${inter.variable} ${raleway.variable} ${hubotSans.variable} ${dancingScript.variable} ${oswald.variable} ${hostGrotesk.variable}`}
     >
       <body className="font-inter antialiased bg-[#131313]">
         <Header />

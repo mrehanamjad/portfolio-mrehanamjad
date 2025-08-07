@@ -15,9 +15,9 @@ export function Header() {
 
   const navItems = [
     { name: "HOME", href: "/", showOnDesktop: true },
-    { name: "ABOUT", href: "/", showOnDesktop: true },
-    { name: "SKILLS", href: "/", showOnDesktop: true },
-    { name: "PROJECTS", href: "/", showOnDesktop: true },
+    { name: "ABOUT", href: "#about", showOnDesktop: true },
+    { name: "SKILLS", href: "#skill-section-main-container", showOnDesktop: true },
+    { name: "PROJECTS", href: "#project-s", showOnDesktop: true },
     { name: "CONTACT", href: "/", showOnDesktop: false },
   ];
 
@@ -243,7 +243,7 @@ export function Header() {
         plateFormIcon={SiGmail}
         name="rehanamjad520@gmail.com"
         userName=""
-        className="nav-social-card py-5 px-6  md:border-white border-3 rounded-md lg:hover:bg-[#bb001cd3] lg:hover:border-red-500 min-w-80 w-full"
+        className="nav-social-card py-5 px-6  md:border-white border-3 rounded-md  lg:hover:border-red-400 min-w-80 w-full"
         plateFormNameColor="max-md:text-red-600 md:group-hover:text-red-400"
       />
       <SocialCard
@@ -251,7 +251,7 @@ export function Header() {
         plateFormIcon={FaLinkedinIn}
         name="M.Rehan Amjad"
         userName="/in/mrehanamjad"
-        className="nav-social-card py-4 px-6 md:border-white border-3 rounded-md lg:hover:bg-[#103b6a] lg:hover:border-sky-700 min-w-80 w-full"
+        className="nav-social-card py-4 px-6 md:border-white border-3 rounded-md  lg:hover:border-sky-400 min-w-80 w-full"
         plateFormNameColor="max-md:text-sky-700 md:group-hover:text-sky-500"
       />
       <SocialCard
@@ -259,7 +259,7 @@ export function Header() {
         plateFormName="Github"
         name="M.RehanAmjad"
         userName="/mrehanamjad"
-        className="nav-social-card py-4 px-6  md:border-white border-3 rounded-md  lg:hover:bg-[#161b22] lg:hover:border-white/30 min-w-80 w-full"
+        className="nav-social-card py-4 px-6  md:border-white border-3 rounded-md   lg:hover:border-white/30 min-w-80 w-full"
         plateFormNameColor=" max-md:text-gray-200 md:group-hover:text-gray-300"
       />
           </div>

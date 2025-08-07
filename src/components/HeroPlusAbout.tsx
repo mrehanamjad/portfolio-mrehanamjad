@@ -9,6 +9,21 @@ import gsap from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
 function HeroPlusAbout() {
+
+  useGSAP(()=>{
+    const tl = gsap.timeline();
+    tl.to("#hero-img",{
+      y : "-50%",
+      duration:2,
+      delay:1,
+    })
+    .to("#hero-img",{
+      filter: "grayscale(30%)",
+      duration:1,
+    })
+  })
+
+
   useGSAP(() => {
      const tl = gsap.timeline({
       scrollTrigger: {
@@ -19,11 +34,20 @@ function HeroPlusAbout() {
         scrub: 0.5,
       },
      });
-    tl.to("#hero", {
-      "--clip": "25%",
+    tl.to("#hero-img",{
+       ease: "power2",
+       duration:2,
+       rotate: 0,
+       opacity:1,
+       zIndex: 1,
+       scale: 0.9,
+       x: 51,
+       grayScale: 0,
+    },0).to("#hero", {
+      "--clip": "15%",
       ease: "power2",
       duration: 2,
-    }).to("#hero",{
+    },0).to("#hero",{
       opacity:0,
       ease: "power2",
       duration:0.05
@@ -58,18 +82,19 @@ function HeroPlusAbout() {
           <div className="h-full flex justify-center items-center flex-col gap-8 md:gap-20">
             <div className="text-center text-6xl lg:text-8xl font-bold scale-[1] flex justify-center items-center gap-4 ">
               <span>ABOUT</span>
-              <div  className="aboutme-img md:w-24 md:h-24 w-16 h-16 scale-[2.4] md:scale-[4.4] bg-green-300 rounded-full bg-center bg-cover" style={{backgroundImage: "url(https://avatars.githubusercontent.com/u/144995992?v=4)"}}></div>
+              <div  className="aboutme-img md:w-24 md:h-24 w-16 h-16 scale-[1.8] md:scale-[3] bg-green-300 rounded-full bg-center bg-cover" style={{backgroundImage: "url(https://avatars.githubusercontent.com/u/144995992?v=4)"}}></div>
               <span>ME</span>
             </div>
             <p
+            id="about-txt"
               className="aboutme-text text-center hidden  text-balance text-gray-200 text-xl md:text-2xl lg:text-3xl font-semibold leading-relaxed"
             >
-              <span className="aboutme-text-piece">I&apos;m a passionate Full-Stack Developer and AI </span>
-              <span className="aboutme-text-piece">enthusiast focused on crafting elegant, fast, and </span>
-              <span className="aboutme-text-piece">accessible digital experiences. With tools</span>
+              <span className="aboutme-text-piece">I&apos;m a passionate Full-Stack Developer 👨‍💻 and AI </span>
+              <span className="aboutme-text-piece">enthusiast ✨ focused on crafting elegant, fast, and </span>
+              <span className="aboutme-text-piece">accessible digital experiences 🚀. With tools</span>
               <span className="aboutme-text-piece"> like Next.js, React, and Tailwind CSS,</span>
               <span className="aboutme-text-piece">
-                I turn ideas into reality—merging innovation, performance, and
+                I turn ideas into reality 💡🌱 — merging 🔀 innovation, performance, and
                 design.
               </span>
             </p>
@@ -82,6 +107,12 @@ function HeroPlusAbout() {
           style={{ "--clip": "100%" } as React.CSSProperties}
           className="absolute overflow-hidden heroclip z-10 bg-[#131313] top-0 left-0 h-full w-full flex flex-col gap-4 justify-center items-center pt-16"
         >
+
+<div
+    id="hero-img"
+    className="absolute z-0 w-56 h-72 md:w-72 md:h-96 bg-white -rotate-[12deg] rounded-xl bg-cover bg-center opacity-50 grayscale top-1/2 left-1/2 transform -translate-x-1/2 translate-y-[100%]"
+    style={{ backgroundImage: "url(https://avatars.githubusercontent.com/u/144995992?v=4)" }}
+  ></div>
          
           <h3 className="-mb-2 herosm-greeting relative text-5xl md:text-8xl font-dancing-script bg-gradient-to-t from-black/40 via-white to-white inline-block text-transparent bg-clip-text font-bold">
             Hello, I am
