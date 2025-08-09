@@ -20,9 +20,10 @@ function ProjectSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
 
-  const isMobile = window.innerWidth <= 700;
-  console.log(isMobile)
-
+  let isMobile = false
+  if (typeof window !== "undefined"){
+   isMobile = window.innerWidth <= 700;
+  }
 
   useGSAP(() => {
 
