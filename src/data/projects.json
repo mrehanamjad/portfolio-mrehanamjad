@@ -40,7 +40,8 @@
       "technologies": ["React", "Appwrite", "TailwindCss"],
       "category": "Full-Stack",
       "live": "https://social-bloging-website.vercel.app/",
-      "github": "https://github.com/mrehanamjad/social-bloging-website"
+      "github": "https://github.com/mrehanamjad/social-bloging-website",
+            "featured": true
     },
     {
       "color": "bg-gradient-to-br from-sky-500 to-green-600 text-gray-800",
@@ -50,7 +51,9 @@
       "technologies": ["NextJs", "TypeScript", "TailwindCss","Accenterity UI"],
       "category": "FrontEnd",
       "live": "https://art-school-site.vercel.app/",
-      "github": "https://github.com/mrehanamjad/social-bloging-website"
+      "github": "https://github.com/mrehanamjad/social-bloging-website",
+            "featured": true
+
     },
     {
       "color": "bg-gradient-to-br from-purple-600 to-purple-800 text-gray-",
@@ -60,7 +63,8 @@
       "technologies": ["NextJs","Css","TypeScript"],
       "category": "FrontEnd",
       "live": "https://nextjs-multipage-website-with-customcss.vercel.app/",
-      "github": "https://github.com/mrehanamjad/nextjs-multipage-website-with-customcss"
+      "github": "https://github.com/mrehanamjad/nextjs-multipage-website-with-customcss",
+            "featured": true
     },
     {
       "color":"bg-gradient-to-br from-purple-500 to-purple-600",
@@ -70,7 +74,8 @@
       "technologies": ["ReactJs","TailwindCss"],
       "category": "FrontEnd",
       "live": "https://r-notes-app.netlify.app/",
-      "github": "https://github.com/mrehanamjad/notes-app-react"
+      "github": "https://github.com/mrehanamjad/notes-app-react",
+            "featured": false
     },
     {
       "color": "bg-gradient-to-br from-gray-800 to-gray-900",
@@ -80,7 +85,8 @@
       "technologies": ["HTML","TailwindCss","Typescript","Apis"],
       "category": "FrontEnd",
       "live": "https://quran40.netlify.app/",
-      "github": "https://github.com/mrehanamjad/Quran40"
+      "github": "https://github.com/mrehanamjad/Quran40",
+            "featured": true
     },
     {
       "color": "bg-gradient-to-br from-violet-500 to-fuchsia-500 ",
@@ -90,6 +96,7 @@
       "technologies": ["HTML","TailwindCss","Typescript","Apis"],
       "category": "FrontEnd",
       "live": "https://mrehanamjad.github.io/coding-quiz-app/",
-      "github": "https://github.com/mrehanamjad/coding-quiz-app"
+      "github": "https://github.com/mrehanamjad/coding-quiz-app",
+            "featured": true
     }
 ]

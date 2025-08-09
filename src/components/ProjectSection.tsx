@@ -20,9 +20,13 @@ function ProjectSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
 
- 
+  const isMobile = window.innerWidth <= 700;
+  console.log(isMobile)
+
 
   useGSAP(() => {
+
+
     // Animate main heading "PROJECTS"
     gsap.fromTo(
       ".projects-main-heading",
@@ -105,7 +109,7 @@ function ProjectSection() {
               rotation: gsap.utils.random(-10, 10),
               // scale: 0.8,
               // opacity: 0.8,
-              duration: 1,
+              duration: isMobile ? 0.2 : 1,
               ease: "power2.inOut",
             },
             index * 0.5
@@ -131,7 +135,7 @@ function ProjectSection() {
   return (
     <section ref={sectionRef} id="project-s" className="w-full min-h-screen">
       <Container>
-        <div id="project-section-main-container" className="w-full">
+        <div id="project-section-main-container" className="w-full overflow-hidden">
           {/* Header Section */}
           <div className="pt-20 pb-16 text-center">
             <h2 className="projects-main-heading text-4xl  mb-4 text-outline-my font-semibold">
@@ -162,8 +166,8 @@ function ProjectSection() {
             className="relative h-screen flex items-center justify-center"
           >
             <Link href={"https://github/mrehanamjad"} target="_blank" className=" flex  justify-center items-end gap-1 cursor-pointer group hover:text-green-500" >
-            <span className={`relative text-6xl font-bold italic transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[4px] after:bg-green-700 after:transition-all after:duration-300 group-hover:after:w-full flex gap-2`}>
-                    View All Projects <LuArrowUpRight className="text-7xl group-hover:rotate-12 transition-transform" />
+            <span className={`relative text-2xl md:text-6xl font-bold italic transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[4px] after:bg-green-700 after:transition-all after:duration-300 group-hover:after:w-full flex gap-2`}>
+                    View All Projects <LuArrowUpRight className="text-2xl md:text-7xl group-hover:rotate-12 transition-transform" />
                   </span>
             </Link>
 
