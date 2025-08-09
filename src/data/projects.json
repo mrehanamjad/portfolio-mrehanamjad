@@ -1,0 +1,95 @@
+[  {
+      "color": "bg-gradient-to-br from-blue-700 to-blue-600 text-gray-100",
+      "title": "Reel Blast",
+      "description": "🚀 A full-stack social platform where users can upload, explore, and engage with trending short-form videos, built for seamless video sharing and a dynamic user experience 🎥🔥. It includes features such as authentication, uploading, editing, deleting, and saving reels, as well as sharing and commenting on reels, creating user accounts, and following creators",
+      "image": "/projects/reelblast.png",
+      "technologies": ["Next.js", "Mongodb","TypeScript","Tailwind CSS","ImageKit"],
+      "category": "Full-Stack",
+      "live": "https://reelblast.vercel.app/",
+      "github": "https://github.com/mrehanamjad/reelblast-nextjs-fullstack",
+      "featured": true
+    },
+  {
+    
+    "color": "bg-gradient-to-br from-cyan-500 to-purple-600 text-gray-800",
+      "title": "AI Powered Finite Autometa Editor and Simulator ",
+      "description": "✨ A full-stack AI platform to Design, visualize, and simulate Deterministic and Non-deterministic Finite Automata | Convert Regex to DFA and NFA | AI Assistant for Finite Automata 🌟🌟🌟 Used fastApi & Langchain for backend and NextJs for frontEnd",
+      "image": "/projects/fa-editor.png",
+      "technologies": ["Next.js", "Fast Api","Langchain","Python","TypeScript"],
+      "category": "Full-Stack",
+      "live": "https://fa-editor-ai.vercel.app/",
+      "github": "https://github.com/mrehanamjad/AI-Powered-Finite-Automata-Editor-Simulator",
+      "featured": true
+  },
+    {
+      "color": "bg-gradient-to-br from-amber-500 to-amber-600 text-gray-800",
+      "title": "Furniture E-Commerce Platform",
+      "description": "This furniture website provides users with a seamless shopping experience to browse and purchase furniture items. It combines a responsive frontend with dynamic backend capabilities powered by Sanity CMS to ensure efficient content management and order processing.",
+      "image": "/projects/furniture-eccomerce.png",
+      "technologies": ["Next.js", "TypeScript","Tailwind CSS","Sanity"],
+      "category": "Full-Stack",
+      "live": "https://giaic-hackathon3-ecommerce-website.vercel.app/",
+      "github": "https://github.com/mrehanamjad/GIAIC-Hackathon3-EcommerceWebsite",
+      "featured": true
+    },
+    {
+      "color": "bg-gradient-to-br from-indigo-500 to-indigo-600",
+      "title": "Social Blogging Website",
+      "description": "A full-stack social blogging platform where users can read posts/blogs written by others and also write their own. The platform includes features like user authentication, categories, and the ability to add, edit, or delete blogs/posts. Built using React for the frontend and Appwrite as the backend.",
+      "image": "/projects/social-blogging.png",
+      "technologies": ["React", "Appwrite", "TailwindCss"],
+      "category": "Full-Stack",
+      "live": "https://social-bloging-website.vercel.app/",
+      "github": "https://github.com/mrehanamjad/social-bloging-website"
+    },
+    {
+      "color": "bg-gradient-to-br from-sky-500 to-green-600 text-gray-800",
+      "title": "Art School Website",
+      "description": "This is an Art School website built with Next.js and TypeScript, using the Accenterity UI library for the frontend. The website is designed to provide information about courses, instructors, and upcoming webinars. It is deployed on Vercel for fast and efficient hosting.",
+      "image": "/projects/act-school.png",
+      "technologies": ["NextJs", "TypeScript", "TailwindCss","Accenterity UI"],
+      "category": "FrontEnd",
+      "live": "https://art-school-site.vercel.app/",
+      "github": "https://github.com/mrehanamjad/social-bloging-website"
+    },
+    {
+      "color": "bg-gradient-to-br from-purple-600 to-purple-800 text-gray-",
+      "title": "Online learning platform Website",
+      "description": "A Multipage Online learning platform website with custom css",
+      "image": "/projects/learning-web.png",
+      "technologies": ["NextJs","Css","TypeScript"],
+      "category": "FrontEnd",
+      "live": "https://nextjs-multipage-website-with-customcss.vercel.app/",
+      "github": "https://github.com/mrehanamjad/nextjs-multipage-website-with-customcss"
+    },
+    {
+      "color":"bg-gradient-to-br from-purple-500 to-purple-600",
+      "title": "React Notes App",
+      "description": "A simple and functional notes app built with React that allows users to add, delete, search, and categorize notes. The app also features customizable background colors for notes and uses local storage to persist data.",
+      "image": "/projects/notes-app.png",
+      "technologies": ["ReactJs","TailwindCss"],
+      "category": "FrontEnd",
+      "live": "https://r-notes-app.netlify.app/",
+      "github": "https://github.com/mrehanamjad/notes-app-react"
+    },
+    {
+      "color": "bg-gradient-to-br from-gray-800 to-gray-900",
+      "title": "Quran40 - audio player",
+      "description": "Quran40:Listen and Read the Holy Quran with Translation in 40+ languages.---This project offers a user-friendly platform to engage with the Holy Quran through an interactive audio player and comprehensive multilingual support.",
+      "image": "/projects/quran40.png",
+      "technologies": ["HTML","TailwindCss","Typescript","Apis"],
+      "category": "FrontEnd",
+      "live": "https://quran40.netlify.app/",
+      "github": "https://github.com/mrehanamjad/Quran40"
+    },
+    {
+      "color": "bg-gradient-to-br from-violet-500 to-fuchsia-500 ",
+      "title": "Coding Quiz Site",
+      "description": "This is a web-based coding quiz platform built using HTML, Tailwind CSS, and TypeScript. It offers a variety of coding challenges to test your knowledge and skills in different programming languages and concepts.",
+      "image": "/projects/coding-quiz-app.png",
+      "technologies": ["HTML","TailwindCss","Typescript","Apis"],
+      "category": "FrontEnd",
+      "live": "https://mrehanamjad.github.io/coding-quiz-app/",
+      "github": "https://github.com/mrehanamjad/coding-quiz-app"
+    }
+]

@@ -8,11 +8,15 @@ import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa6";
 import { LuArrowUpRight } from "react-icons/lu";
-import { cards } from "@/data/projects";
+import projectsData from "@/data/projects.json";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function ProjectSection() {
+
+  const cards = projectsData
+
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
 
@@ -91,7 +95,7 @@ function ProjectSection() {
 
     // Animate each card
     cardElements.forEach((card, index) => {
-      if (index < cardElements.length - 1) {
+      if (index <= cardElements.length - 1) {
         const nextCard = cardElements[index + 1];
         mainTl
           .to(
@@ -99,8 +103,8 @@ function ProjectSection() {
             {
               y: -window.innerHeight * 1.2,
               rotation: gsap.utils.random(-10, 10),
-              scale: 0.8,
-              opacity: 0.8,
+              // scale: 0.8,
+              // opacity: 0.8,
               duration: 1,
               ease: "power2.inOut",
             },
@@ -157,17 +161,23 @@ function ProjectSection() {
             ref={cardsRef}
             className="relative h-screen flex items-center justify-center"
           >
+            <Link href={"https://github/mrehanamjad"} target="_blank" className=" flex  justify-center items-end gap-1 cursor-pointer group hover:text-green-500" >
+            <span className={`relative text-6xl font-bold italic transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[4px] after:bg-green-700 after:transition-all after:duration-300 group-hover:after:w-full flex gap-2`}>
+                    View All Projects <LuArrowUpRight className="text-7xl group-hover:rotate-12 transition-transform" />
+                  </span>
+            </Link>
+
             {cards.map((card, index) => (
               <div
                 key={index}
-                className={`project-card absolute w-[93%] md:w-[85%] max-w-4xl h-[80%] ${card.color} rounded-2xl shadow-2xl border p-4 border-white/10  flex max-md:flex-col justify-between`}
+                className={`project-card absolute w-[97%] md:w-[85%] max-w-[60rem] h-[86%] ${card.color} rounded-2xl shadow-2xl border p-2 md:p-4 border-white/10  flex max-md:flex-col max-md:gap-4 md:justify-between`}
               >
-                <div className="pr-1 py-4 text-white flex flex-col md:w-[35%]">
+                <div className={`md:pr-1 max-md:px-1 md:py-4  flex flex-col md:w-[35%] h-full ${index % 2 === 0 ? "order-1" : "order-2 md:pl-3"} max-md:order-2 max-md:justify-between`}>
                   <div className="w-full h-full flex flex-col gap-4">
                     <h4 className="font-bold text-3xl">{card.title}</h4>
-                    <p className="">{card.description}</p>
+                    <p className="md:text-lg  ">{card.description}</p>
                     <div className="flex flex-wrap gap-2">
-                      {card.techStack.map((tech, index) => (
+                      {card.technologies.map((tech, index) => (
                         <span
                           key={index}
                           className="text-sm py-1 px-2 rounded-lg bg-white/20"
@@ -177,19 +187,47 @@ function ProjectSection() {
                       ))}
                     </div>
                   </div>
-                    <div className="flex justify-end items-center px-2">
-                      <FaGithub title="View Project" className="w-8 h-8" />
-                      <LuArrowUpRight title="View Live" className="w-12 h-12" />
+                    <div className="flex justify-end items-center px-2 gap-2 max-md:justify-between max-md:px-4 max-md:pb-4 pt-2 ">
+                      <Link 
+                      href={card.github} 
+                      target="_blank"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg 
+                        bg-white/10 hover:bg-white/20 border border-white/20
+                        transition-all duration-200 group text-sm sm:text-base"
+                      title="View Code"
+                    >
+                      <FaGithub className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-12 transition-transform" />
+                      <span className="inline md:hidden">Code</span>
+                    </Link>
+                    <Link 
+                    href={card.live}
+                    target="_blank"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg 
+                        bg-white/10 hover:bg-white/20 border border-white/20
+                        transition-all duration-200 group text-sm sm:text-base"
+                      title="View Live"
+                    >
+                      <span className="inline md:hidden">Live</span>
+                      <LuArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-12 transition-transform" />
+                    </Link>
                     </div>
                 </div>
-                <div className="bg-black/20 w-full md:w-[65%] h-full rounded-xl md:flex-1">
+                <div className={`relative bg-black/20 w-full md:w-[65%] h-[40%] md:h-full rounded-xl max-md:order-1 md:flex-1 ${index % 2 === 0 ? "order-2" : "order-1"}`}>
                   <Image
-                    className="h-full w-full rounded-xl"
-                    src={card.images[2]}
+                    className="h-full w-full rounded-xl object-fill"
+                    src={card.image}
                     alt={card.title + "-image"}
                     width={1000}
                     height={1000}
+                    quality={100}
                   />
+                   <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
+                      <span className={`px-3 py-1.5 text-xs sm:text-sm font-medium
+                        ${card.color} backdrop-blur-sm rounded-full
+                        border border-white/20 text-white antialiased`}>
+                        {card.category}
+                      </span>
+                    </div>
                 </div>
               </div>
             ))}
