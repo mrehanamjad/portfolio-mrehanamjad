@@ -19,9 +19,7 @@ function ProjectSection() {
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
-
- const isMobile = typeof window !== "undefined" && window.innerWidth <= 700;
-
+  
   useGSAP(() => {
 
 
@@ -107,7 +105,7 @@ function ProjectSection() {
               rotation: gsap.utils.random(-10, 10),
               // scale: 0.8,
               // opacity: 0.8,
-              duration: isMobile ? 0.2 : 1,
+              duration:  0.7,
               ease: "power2.inOut",
             },
             // index * 0.5
@@ -118,7 +116,7 @@ function ProjectSection() {
             {
               scale: 1,
               rotate: 0,
-              duration: isMobile ? 0 :0.5,
+              duration: 0.3,
               ease: "back.out(1.7)",
             },
             // index * 0.5 + 0.3
