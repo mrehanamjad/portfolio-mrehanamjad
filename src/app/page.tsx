@@ -8,11 +8,6 @@ function Home() {
     <div className="bg-[#131313]">
       
       <HeroPlusAbout />
-      
-
-      {/* <SocialCardsSection />
-      <AboutMe /> */}
-      {/* <div className="w-full h-screen"></div> */}
       <SkillsSection />
       <ProjectSection />
     </div>
