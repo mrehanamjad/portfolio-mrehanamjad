@@ -20,10 +20,7 @@ function ProjectSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
 
-  let isMobile = false
-  if (typeof window !== "undefined"){
-   isMobile = window.innerWidth <= 700;
-  }
+ const isMobile = typeof window !== "undefined" && window.innerWidth <= 700;
 
   useGSAP(() => {
 
@@ -113,17 +110,19 @@ function ProjectSection() {
               duration: isMobile ? 0.2 : 1,
               ease: "power2.inOut",
             },
-            index * 0.5
+            // index * 0.5
+            index
           )
           .to(
             nextCard,
             {
               scale: 1,
               rotate: 0,
-              duration: 0.5,
+              duration: isMobile ? 0 :0.5,
               ease: "back.out(1.7)",
             },
-            index * 0.5 + 0.3
+            // index * 0.5 + 0.3
+            index + 0.25
           ).to(card,{opacity: 0})
       }
     });
@@ -175,7 +174,7 @@ function ProjectSection() {
             {cards.map((card, index) => (
               <div
                 key={index}
-                className={`project-card absolute w-[97%] md:w-[85%] max-w-[60rem] h-[86%] ${card.color} rounded-2xl shadow-2xl border p-2 md:p-4 border-white/10  flex max-md:flex-col max-md:gap-4 md:justify-between`}
+                className={`project-card absolute w-[97%] md:w-[85%] max-w-[60rem] h-[86%] md:h-[80%] ${card.color} rounded-2xl shadow-2xl border p-2 md:p-4 border-white/10  flex max-md:flex-col max-md:gap-4 md:justify-between`}
               >
                 <div className={`md:pr-1 max-md:px-1 md:py-4  flex flex-col md:w-[35%] h-full ${index % 2 === 0 ? "order-1" : "order-2 md:pl-3"} max-md:order-2 max-md:justify-between`}>
                   <div className="w-full h-full flex flex-col gap-4">
