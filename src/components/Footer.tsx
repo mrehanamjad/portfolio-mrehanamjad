@@ -101,7 +101,7 @@ function Footer() {
         </div>
 
         <div className="flex justify-center items-center h-60">
-            <h2 className="text-6xl max-md:-rotate-12 md:text-8xl font-dancing-script font-bold text-green-600">M.Rehan<span className="md:hidden">_</span>{" "}<span className="md:hidden">&nbsp;_</span>Amjad</h2>
+            <h2 className="text-5xl  md:text-6xl lg:text-8xl font-dancing-script font-bold text-green-600">M.Rehan Amjad</h2>
         </div>
       </div>
     </footer>
