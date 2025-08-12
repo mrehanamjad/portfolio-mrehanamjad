@@ -52,7 +52,7 @@ function SkillsSection() {
       }
     );
 
-    let split = SplitText.create(".skills-subtitle",{
+    const split = SplitText.create(".skills-subtitle",{
       type:"words,chars"
     })
     // Animate subtitle words with stagger

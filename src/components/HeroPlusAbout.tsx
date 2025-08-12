@@ -13,7 +13,7 @@ gsap.registerPlugin(SplitText);
 function HeroPlusAbout() {
   useGSAP(() => {
 
-    let split = SplitText.create(".description",{
+    const split = SplitText.create(".description",{
       type:"chars,words"
     })
 

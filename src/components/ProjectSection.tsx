@@ -48,7 +48,7 @@ function ProjectSection() {
       }
     );
 
-    let split = SplitText.create(".projects-subtitle",{
+    const split = SplitText.create(".projects-subtitle",{
       type:"words,chars"
     })
     // Animate subtitle words with stagger
