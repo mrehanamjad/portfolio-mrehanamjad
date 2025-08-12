@@ -8,7 +8,7 @@ const Preloader: React.FC = () => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    let counterObj = { val: 0 };
+    const counterObj = { val: 0 };
 
     // GSAP counter animation
     gsap.to(counterObj, {
