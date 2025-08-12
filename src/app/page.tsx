@@ -2,6 +2,7 @@ import React from "react";
 import HeroPlusAbout from "@/components/HeroPlusAbout";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectSection from "@/components/ProjectSection";
+import ContactSection from "@/components/ContactSection";
 
 function Home() {
   return (
@@ -10,6 +11,7 @@ function Home() {
       <HeroPlusAbout />
       <SkillsSection />
       <ProjectSection />
+      <ContactSection />
     </div>
   );
 }
