@@ -28,8 +28,8 @@ function Footer() {
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-8">
           {/* Branding */}
           <div>
-            <h2 className="text-2xl font-bold text-white">Rehan Amjad</h2>
-            <p className="text-sm text-gray-400">
+            <h2 className="text-2xl font-bold text-white">M.Rehan Amjad</h2>
+            <p className="text text-gray-400 mt-0.5">
               Full-Stack Developer & AI Enthusiast
             </p>
             <p className="text-sm text-gray-500 mt-4">
@@ -62,7 +62,7 @@ function Footer() {
               <span>{email}</span>
               <div className="relative">
                 <FaCopy />
-                <span className={`absolute -top-8 -left-1/2 px-2 ${copyToolKit ? "blcok" : "hidden"} text-sm bg-gray-900 rounded-lg`}>Copy</span>
+                <span className={`absolute -top-8 -left-1/2 px-2 ${copyToolKit ? "blcok" : "hidden"} text-sm bg-gray-900 rounded-lg`}>Copied</span>
                 </div>
               </button>
             </div>
@@ -101,7 +101,7 @@ function Footer() {
         </div>
 
         <div className="flex justify-center items-center h-60">
-            <h2 className="text-8xl font-dancing-script font-bold text-green-600">M.Rehan Amjad</h2>
+            <h2 className="text-6xl max-md:-rotate-12 md:text-8xl font-dancing-script font-bold text-green-600">M.Rehan<span className="md:hidden">_</span>{" "}<span className="md:hidden">&nbsp;_</span>Amjad</h2>
         </div>
       </div>
     </footer>

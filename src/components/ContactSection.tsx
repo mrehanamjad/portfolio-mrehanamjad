@@ -25,6 +25,18 @@ const ContactSection = () => {
     setLoading(true);
     setStatus(null);
 
+    if(formData.name === "" || formData.email === "" || formData.message === ""){
+      setLoading(false);
+      setStatus("⚠️ Please fill all the fields");
+      return;
+    }
+
+    if(formData.email.includes("@") || formData.email.includes(".")) {
+        setLoading(false);
+      setStatus("⚠️ Invalid Email address");
+      return;
+    }
+
     try {
       const res = await fetch(process.env.NEXT_PUBLIC_CONTACT_FORM_API!, {
         method: "POST",
@@ -52,7 +64,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="relative w-full min-h-screen bg-gradient-to-b from- via-neutral-900 to-black text-white py-20">
+    <section id="contact" className="relative w-full min-h-screen bg-gradient-to-b from- via-neutral-900 to-black text-white py-20">
       <Container>
         <div className="flex flex-col items-center gap-12">
           {/* Heading */}

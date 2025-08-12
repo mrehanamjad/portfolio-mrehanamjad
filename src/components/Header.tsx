@@ -17,8 +17,8 @@ export function Header() {
     { name: "HOME", href: "/", showOnDesktop: true },
     { name: "ABOUT", href: "#about", showOnDesktop: true },
     { name: "SKILLS", href: "#skill-section-main-container", showOnDesktop: true },
-    { name: "PROJECTS", href: "#project-s", showOnDesktop: true },
-    { name: "CONTACT", href: "/", showOnDesktop: false },
+    { name: "PROJECTS", href: "/projects", showOnDesktop: true },
+    { name: "CONTACT", href: "/#contact", showOnDesktop: false },
   ];
 
   useGSAP(() => {
