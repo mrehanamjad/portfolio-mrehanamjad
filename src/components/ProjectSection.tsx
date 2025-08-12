@@ -140,10 +140,10 @@ function ProjectSection() {
          
           {/* Header Section */}
           <div className="pt-20 pb-16 text-center">
-            <h2 className="projects-main-heading text-4xl  mb-4 text-outline-my font-semibold">
+            <h2 className="projects-main-heading text-4xl  mb-8 text-outline-my font-semibold">
               PROJECTS
             </h2>
-            <h3 className="projects-subtitle text-center text-6xl md:text-8xl uppercase font-bold bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-[#f5f5f5] bg-clip-text">
+            <h3 className="projects-subtitle text-center text-6xl md:text-8xl leading-16 font-bold bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-[#f5f5f5] bg-clip-text">
               Some Of My Recent Work
             </h3>
           </div>

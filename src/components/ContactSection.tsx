@@ -3,7 +3,12 @@
 import React, {  useState } from "react";
 import Container from "./Container";
 import SocialCardsSection from "./Socials/SocialCardsSection";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger, SplitText } from "gsap/all";
 
+gsap.registerPlugin(SplitText)
+gsap.registerPlugin(ScrollTrigger)
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -63,12 +68,34 @@ const ContactSection = () => {
     }
   };
 
+  useGSAP(()=>{
+    const split = SplitText.create(".contact-h",{
+      type:"chars"
+    })
+    // Animate subtitle words with stagger
+    gsap.from(
+      split.chars,
+      {
+        y: 100,
+        autoAlpha: 0,
+        rotationX: 90,
+        duration: 1,
+        stagger: 0.05,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: "#contact-container",
+          start: "top 60%",
+        }
+      }
+    );
+  })
+
   return (
     <section id="contact" className="relative w-full min-h-screen bg-gradient-to-b from- via-neutral-900 to-black text-white py-20">
       <Container>
-        <div className="flex flex-col items-center gap-12">
+        <div id="contact-container" className="flex flex-col items-center gap-12">
           {/* Heading */}
-          <h2 className="text-6xl md:text-8xl lg:text-9xl  font-extrabold text-center tracking-wide bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-transparent bg-clip-text">
+          <h2  className="contact-h text-7xl md:text-8xl lg:text-9xl  font-extrabold text-center tracking-wide bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-[#f5f5f5] bg-clip-text">
             Contact
           </h2>
 
@@ -81,7 +108,7 @@ const ContactSection = () => {
           {/* Form */}
           <form
             onSubmit={handleSubmit}
-            className="w-full max-w-2xl flex flex-col gap-6 mt-8"
+            className="w-full max-w-2xl px-2 flex flex-col gap-6 mt-8"
           >
             <input
               type="text"

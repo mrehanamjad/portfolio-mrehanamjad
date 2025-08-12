@@ -24,12 +24,12 @@ function Footer() {
   // Animate the glow on mount
   useGSAP(() => {
     gsap.fromTo(
-      ".footer-glow",
+      ".footer-glow_",
       { opacity: 0, scaleY: 0.5, y: 100 },
       { opacity: 0.6, scaleY: 1, y: 50, duration: 2, ease: "power2.out", 
         scrollTrigger: {
           trigger: "#footer",
-          start: "bottom bottom"
+          start: "top center",
         }
        }
     );
@@ -41,7 +41,7 @@ function Footer() {
       className="relative bg-black text-gray-300 border-t border-gray-800 overflow-hidden"
     >
       {/* Glow Effect */}
-      <div className="footer-glow absolute bottom-0 left-0 w-full h-60 pointer-events-none">
+      <div className="footer-glow_ absolute bottom-0 left-0 w-full h-60 pointer-events-none">
         <div className="w-full h-full bg-green-500/30 blur-[80px]"></div>
       </div>
 

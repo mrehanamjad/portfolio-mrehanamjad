@@ -56,8 +56,6 @@ function SkillsSection() {
       type:"words,chars"
     })
     // Animate subtitle words with stagger
-
-  
     gsap.from(
       split.chars,
       {
@@ -107,7 +105,7 @@ function SkillsSection() {
             <h2 className="skills-main-heading text-4xl mb-4 text-outline-my font-semibold ">
               SKILLS
             </h2>
-            <h3 className="text-5xl skills-subtitle text-center md:text-8xl  text-[#f5f5f5] font-bold bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block  bg-clip-text">
+            <h3 className="text-6xl leading-16 skills-subtitle text-center md:text-8xl  text-[#f5f5f5] font-bold bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block  bg-clip-text">
               Tools Of My Trade
             </h3>
           </div>
