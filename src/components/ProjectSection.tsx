@@ -10,8 +10,11 @@ import { FaGithub } from "react-icons/fa6";
 import { LuArrowUpRight } from "react-icons/lu";
 import projectsData from "@/data/projects.json";
 import Link from "next/link";
+import { SplitText } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(SplitText);
+
 
 function ProjectSection() {
 
@@ -24,8 +27,6 @@ function ProjectSection() {
   const vh = typeof window !== "undefined" ? window.innerHeight : 800; // cache height
 
   useGSAP(() => {
-
-
     // Animate main heading "PROJECTS"
     gsap.fromTo(
       ".projects-main-heading",
@@ -47,29 +48,28 @@ function ProjectSection() {
       }
     );
 
+    let split = SplitText.create(".projects-subtitle",{
+      type:"words,chars"
+    })
     // Animate subtitle words with stagger
-    gsap.fromTo(
-      ".projects-subtitle-word",
+
+  
+    gsap.from(
+      split.chars,
       {
         y: 100,
-        opacity: 0,
+        autoAlpha: 0,
         rotationX: 90,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        rotationX: 0,
         duration: 1,
-        stagger: 0.2,
+        stagger: 0.05,
         ease: "power2.out",
         scrollTrigger: {
           trigger: "#project-section-main-container",
-          start: "top 70%",
-          toggleActions: "play none none none",
-          once: true,
-        },
+          start: "top 60%",
+        }
       }
     );
+
 
     const cardElements = gsap.utils.toArray(
       ".project-card"
@@ -136,28 +136,15 @@ function ProjectSection() {
   return (
     <section ref={sectionRef} id="project-s" className="w-full min-h-screen">
       <Container>
-        <div id="project-section-main-container" className="w-full overflow-hidden">
+        <div id="project-section-main-container" className=" w-full overflow-hidden">
+         
           {/* Header Section */}
           <div className="pt-20 pb-16 text-center">
             <h2 className="projects-main-heading text-4xl  mb-4 text-outline-my font-semibold">
               PROJECTS
             </h2>
-            <h3 className=" text-center text-6xl md:text-8xl uppercase font-bold ">
-              <span className="projects-subtitle-word bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-transparent bg-clip-text">
-                Some
-              </span>{" "}
-              <span className="projects-subtitle-word bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-transparent bg-clip-text">
-                Of
-              </span>{" "}
-              <span className="projects-subtitle-word bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-transparent bg-clip-text">
-                My
-              </span>{" "}
-              <span className="projects-subtitle-word bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-transparent bg-clip-text">
-                Resent
-              </span>{" "}
-              <span className="projects-subtitle-word bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-transparent bg-clip-text">
-                Work
-              </span>
+            <h3 className="projects-subtitle text-center text-6xl md:text-8xl uppercase font-bold bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-[#f5f5f5] bg-clip-text">
+              Some Of My Recent Work
             </h3>
           </div>
 

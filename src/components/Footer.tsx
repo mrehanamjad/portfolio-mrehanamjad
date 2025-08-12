@@ -2,28 +2,50 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
-  FaCopy,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaCopy } from "react-icons/fa";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Footer() {
-    const [copyToolKit, setCopyToolKit] = useState(false)
+  const [copyToolKit, setCopyToolKit] = useState(false);
   const email = "rehanamjad520@gmail.com";
 
   const copyEmail = () => {
     navigator.clipboard.writeText(email);
     setCopyToolKit(true);
     setTimeout(() => {
-        setCopyToolKit(false);
+      setCopyToolKit(false);
     }, 1800);
   };
 
+  // Animate the glow on mount
+  useGSAP(() => {
+    gsap.fromTo(
+      ".footer-glow",
+      { opacity: 0, scaleY: 0.5, y: 100 },
+      { opacity: 0.6, scaleY: 1, y: 50, duration: 2, ease: "power2.out", 
+        scrollTrigger: {
+          trigger: "#footer",
+          start: "bottom bottom"
+        }
+       }
+    );
+  });
+
   return (
-    <footer className="bg-black text-gray-300 border-t border-gray-800">
-      <div className="max-w-7xl mx-auto px-6 pt-12">
+    <footer
+      id="footer"
+      className="relative bg-black text-gray-300 border-t border-gray-800 overflow-hidden"
+    >
+      {/* Glow Effect */}
+      <div className="footer-glow absolute bottom-0 left-0 w-full h-60 pointer-events-none">
+        <div className="w-full h-full bg-green-500/30 blur-[80px]"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 pt-12 relative z-10">
         {/* Top Section */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-8">
           {/* Branding */}
@@ -39,15 +61,15 @@ function Footer() {
 
           {/* Navigation */}
           <div className="flex gap-6 text-sm">
-            <a href="/projects" className="hover:text-white transition-colors">
+            <Link href="/projects" className="hover:text-white transition-colors">
               Projects
-            </a>
-            <a href="#about" className="hover:text-white transition-colors">
+            </Link>
+            <Link href="#about" className="hover:text-white transition-colors">
               About
-            </a>
-            <a href="#contact" className="hover:text-white transition-colors">
+            </Link>
+            <Link href="#contact" className="hover:text-white transition-colors">
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Contact & Social */}
@@ -59,10 +81,16 @@ function Footer() {
                 aria-label="Copy email"
                 className="hover:text-white transition-colors cursor-pointer flex items-center gap-2"
               >
-              <span>{email}</span>
-              <div className="relative">
-                <FaCopy />
-                <span className={`absolute -top-8 -left-1/2 px-2 ${copyToolKit ? "blcok" : "hidden"} text-sm bg-gray-900 rounded-lg`}>Copied</span>
+                <span>{email}</span>
+                <div className="relative">
+                  <FaCopy />
+                  <span
+                    className={`absolute -top-8 -left-1/2 px-2 ${
+                      copyToolKit ? "block" : "hidden"
+                    } text-sm bg-gray-900 rounded-lg`}
+                  >
+                    Copied
+                  </span>
                 </div>
               </button>
             </div>
@@ -83,13 +111,6 @@ function Footer() {
               >
                 <FaLinkedin />
               </Link>
-              {/* <Link
-                href="https://twitter.com/"
-                target="_blank"
-                className="hover:text-white transition-colors"
-              >
-                <FaTwitter />
-              </Link> */}
               <Link
                 href={`mailto:${email}`}
                 className="hover:text-white transition-colors"
@@ -100,8 +121,11 @@ function Footer() {
           </div>
         </div>
 
+        {/* Big Name */}
         <div className="flex justify-center items-center h-60">
-            <h2 className="text-5xl  md:text-6xl lg:text-8xl font-dancing-script font-bold text-green-600">M.Rehan Amjad</h2>
+          <h2 className="text-5xl   md:text-6xl lg:text-8xl font-dancing-script font-bold text-green-600">
+            M.Rehan Amjad
+          </h2>
         </div>
       </div>
     </footer>

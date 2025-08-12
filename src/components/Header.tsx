@@ -25,6 +25,14 @@ export function Header() {
     { name: "CONTACT", href: "/#contact", showOnDesktop: false },
   ];
 
+  useGSAP(()=>{
+    gsap.to(".header-main",{
+      opacity:1,
+      duration:0.5,
+      delay:0.5,
+    })
+  })
+
   useGSAP(() => {
     // Initialize dropdown as hidden
     gsap.set(".dropdown-menu", {
@@ -210,7 +218,7 @@ export function Header() {
   };
 
   return (
-    <div className="fixed w-fit right-0  opacity-0 animate-header-my z-40 bg-transparent flex items-center justify-between p-4 py-5 md:px-10 rounded-xl overflow-hidden">
+    <div className="fixed w-fit right-0  opacity-0 header-main z-40 bg-transparent flex items-center justify-between p-4 py-5 md:px-10 rounded-xl overflow-hidden">
       {/* Menu Button */}
       <button
         onClick={toggleMenu}
@@ -248,7 +256,7 @@ export function Header() {
         <div className="w-full h-full mt-14 flex flex-col md:flex-row justify-evenly p-8 md:items-center">
           <div className="flex flex-col items-start gap-2 md:gap-4 justify-center">
             {navItems.map((nav, idx) => (
-              <Link href={nav.href} key={idx}>
+              <Link href={nav.href} key={idx} onClick={toggleMenu} >
                 <div
                   className={`nav-item flex  justify-center items-end gap-1 cursor-pointer group ${
                     nav.name === "CONTACT" ? "text-green-600" : "text-gray-50"

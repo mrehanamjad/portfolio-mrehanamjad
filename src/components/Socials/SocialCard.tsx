@@ -20,7 +20,7 @@ function SocialCard({
   plateFormIcon: IconType;
 }) {
   return (
-    <Link href={link}
+    <Link href={link} target="_blank"
       className={`rounded-2xl w-full  relative p-8 bg-black/10 backdrop-blur-xs border border-zinc-800  z-10 overflow-hidden group  duration-300  ${className}`}
     >
       <div className={`text-4xl  font-bold mb-5 ${plateFormNameColor}`}>
