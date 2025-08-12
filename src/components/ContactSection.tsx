@@ -68,7 +68,7 @@ const ContactSection = () => {
       <Container>
         <div className="flex flex-col items-center gap-12">
           {/* Heading */}
-          <h2 className="text-6xl md:text-8xl lg:text-9xl uppercase font-extrabold text-center tracking-tight bg-gradient-to-t from-gray-100 via-white to-gray-200 text-transparent bg-clip-text">
+          <h2 className="text-6xl md:text-8xl lg:text-9xl uppercase font-extrabold text-center tracking-wide bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-transparent bg-clip-text">
             Contact
           </h2>
 

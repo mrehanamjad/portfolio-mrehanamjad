@@ -91,19 +91,19 @@ function SkillsSection() {
     <section className="w-full min-h-screen h-full">
       <Container>
         <div id="skill-section-main-container" className="h-full w-full ">
-          <div className=" h-[60vh] flex flex-col justify-center items-center gap-4 md:gap-10">
-            <h2 className="skills-main-heading text-4xl text-outline-my font-semibold ">SKILLS</h2>
-            <h3 className="text-5xl text-center md:text-8xl lg:text-9xl uppercase font-bold ">
-              <span className="skills-subtitle-word bg-gradient-to-t from-black/40 via-white to-white inline-block text-transparent bg-clip-text">
+          <div className=" h-[60vh] flex flex-col justify-center items-center gap-4 md:gap-4">
+            <h2 className="skills-main-heading text-4xl mb-4 text-outline-my font-semibold ">SKILLS</h2>
+            <h3 className="text-5xl text-center md:text-8xl  uppercase font-bold ">
+              <span className="skills-subtitle-word bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-transparent bg-clip-text">
                 Tools
               </span>{" "}
-              <span className="skills-subtitle-word bg-gradient-to-t from-black/40 via-white to-white inline-block text-transparent bg-clip-text">
+              <span className="skills-subtitle-word bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-transparent bg-clip-text">
                 Of
               </span>{" "}
-              <span className="skills-subtitle-word bg-gradient-to-t from-black/40 via-white to-white inline-block text-transparent bg-clip-text">
+              <span className="skills-subtitle-word bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-transparent bg-clip-text">
                 My
               </span>{" "}
-              <span className="skills-subtitle-word bg-gradient-to-t from-black/40 via-white to-white inline-block text-transparent bg-clip-text">
+              <span className="skills-subtitle-word bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-transparent bg-clip-text">
                 Trade
               </span>
             </h3>

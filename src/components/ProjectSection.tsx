@@ -143,19 +143,19 @@ function ProjectSection() {
               PROJECTS
             </h2>
             <h3 className=" text-center text-6xl md:text-8xl uppercase font-bold ">
-              <span className="projects-subtitle-word bg-gradient-to-t from-black/40 via-white to-white inline-block text-transparent bg-clip-text">
+              <span className="projects-subtitle-word bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-transparent bg-clip-text">
                 Some
               </span>{" "}
-              <span className="projects-subtitle-word bg-gradient-to-t from-black/40 via-white to-white inline-block text-transparent bg-clip-text">
+              <span className="projects-subtitle-word bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-transparent bg-clip-text">
                 Of
               </span>{" "}
-              <span className="projects-subtitle-word bg-gradient-to-t from-black/40 via-white to-white inline-block text-transparent bg-clip-text">
+              <span className="projects-subtitle-word bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-transparent bg-clip-text">
                 My
               </span>{" "}
-              <span className="projects-subtitle-word bg-gradient-to-t from-black/40 via-white to-white inline-block text-transparent bg-clip-text">
+              <span className="projects-subtitle-word bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-transparent bg-clip-text">
                 Resent
               </span>{" "}
-              <span className="projects-subtitle-word bg-gradient-to-t from-black/40 via-white to-white inline-block text-transparent bg-clip-text">
+              <span className="projects-subtitle-word bg-gradient-to-t from-[#9ca3af] via-[#f5f5f5] to-white inline-block text-transparent bg-clip-text">
                 Work
               </span>
             </h3>
