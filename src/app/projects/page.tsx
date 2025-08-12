@@ -141,27 +141,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 border-t border-gray-800">
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Let's Build Something Amazing Together
-          </h2>
-          <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-            Ready to turn your ideas into reality? I'm always excited to work on
-            innovative projects that push the boundaries of what's possible with
-            modern technology.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl font-semibold hover:from-blue-500 hover:to-purple-500 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-              Start a Project
-            </button>
-            <button className="px-8 py-4 border border-gray-600 rounded-xl font-semibold hover:bg-gray-800 transition-all duration-300">
-              Download Resume
-            </button>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

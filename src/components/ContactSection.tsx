@@ -4,9 +4,8 @@ import React, { FC, useState } from "react";
 import Container from "./Container";
 import SocialCardsSection from "./Socials/SocialCardsSection";
 
-interface ContactSectionProps {}
 
-const ContactSection: FC<ContactSectionProps> = () => {
+const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -46,6 +45,7 @@ const ContactSection: FC<ContactSectionProps> = () => {
       }
     } catch (error) {
       setStatus("⚠️ Something went wrong.");
+      console.log("Contact form error ::",error)
     } finally {
       setLoading(false);
     }
