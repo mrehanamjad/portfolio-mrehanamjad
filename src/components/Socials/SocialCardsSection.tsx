@@ -40,35 +40,38 @@ function SocialCardsSection() {
 
   return (
     <section className="w-full h-full ">
-    <div
-      ref={scrollRef}
-      className="grid grid-cols-3 md:grid-cols-7  h-4xl py-30 px-4 md:gap-2 max-md:space-y-2 max-w-6xl w-full mx-auto"
-    >
-      <SocialCard
-        plateFormName="Gmail"
-        plateFormIcon={SiGmail}
-        name="rehanamjad520@gmail.com"
-        userName=""
-        className="col-span-3 md:col-span-3  lg:hover:border-red-500"
-        plateFormNameColor="max-md:text-red-600 md:group-hover:text-red-400"
-      />
-      <SocialCard
-        plateFormName="LinkedIn"
-        plateFormIcon={FaLinkedinIn}
-        name="M.Rehan Amjad"
-        userName="/in/mrehanamjad"
-        className="col-span-3 md:col-span-2 lg:hover:bg-[#103b6a] lg:hover:border-sky-700"
-        plateFormNameColor="max-md:text-sky-700 md:group-hover:text-sky-500"
-      />
-      <SocialCard
-        plateFormIcon={FaGithub}
-        plateFormName="Github"
-        name="M.RehanAmjad"
-        userName="/mrehanamjad"
-        className="col-span-3 md:col-span-2 lg:hover:bg-[#161b22] lg:hover:border-white/30"
-        plateFormNameColor="max-md:text-gray-200 md:group-hover:text-gray-300"
-      />
-    </div>
+      <div
+        ref={scrollRef}
+        className="grid grid-cols-3 md:grid-cols-7  h-4xl py-30 px-4 md:gap-2 max-md:space-y-2 max-w-6xl w-full mx-auto"
+      >
+        <SocialCard
+          link="mailto:rehanamjad520@gmail.com"
+          plateFormName="Gmail"
+          plateFormIcon={SiGmail}
+          name="rehanamjad520@gmail.com"
+          userName=""
+          className="col-span-3 md:col-span-3  lg:hover:border-red-500"
+          plateFormNameColor="max-md:text-red-600 md:group-hover:text-red-400"
+        />
+        <SocialCard
+          link="https://www.linkedin.com/in/mrehanamjad/"
+          plateFormName="LinkedIn"
+          plateFormIcon={FaLinkedinIn}
+          name="M.Rehan Amjad"
+          userName="/in/mrehanamjad"
+          className="col-span-3 md:col-span-2 lg:hover:bg-[#103b6a] lg:hover:border-sky-700"
+          plateFormNameColor="max-md:text-sky-700 md:group-hover:text-sky-500"
+        />
+        <SocialCard
+          link="https://github.com/mrehanamjad"
+          plateFormIcon={FaGithub}
+          plateFormName="Github"
+          name="M.RehanAmjad"
+          userName="/mrehanamjad"
+          className="col-span-3 md:col-span-2 lg:hover:bg-[#161b22] lg:hover:border-white/30"
+          plateFormNameColor="max-md:text-gray-200 md:group-hover:text-gray-300"
+        />
+      </div>
     </section>
   );
 }

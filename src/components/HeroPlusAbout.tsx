@@ -5,6 +5,7 @@ import { ButtonWG } from "./Button";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -129,7 +130,8 @@ function HeroPlusAbout() {
             modern tech. Let&apos;s turn ideas into reality.
           </p>
           <div className="flex items-center max-md:flex-col max-md:gap-4 justify-center gap-6 mt-8">
-            <ButtonWG>Contact</ButtonWG>
+            <Link href={"/#contact"} >
+            <ButtonWG>Contact</ButtonWG></Link>
             <div className="flex items-center justify-content-center gap-2 font-dancing-script text-xl font-semibold">
               <div className="h-3 w-3 bg-green-800 rounded-full"></div> Open to
               work

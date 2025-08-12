@@ -16,7 +16,11 @@ export function Header() {
   const navItems = [
     { name: "HOME", href: "/", showOnDesktop: true },
     { name: "ABOUT", href: "#about", showOnDesktop: true },
-    { name: "SKILLS", href: "#skill-section-main-container", showOnDesktop: true },
+    {
+      name: "SKILLS",
+      href: "#skill-section-main-container",
+      showOnDesktop: true,
+    },
     { name: "PROJECTS", href: "/projects", showOnDesktop: true },
     { name: "CONTACT", href: "/#contact", showOnDesktop: false },
   ];
@@ -43,13 +47,11 @@ export function Header() {
     // Menu button hover animations
     gsap.set(".menu-button", { scale: 1 });
 
-    const menuHoverTl = gsap
-      .timeline({ paused: true })
-      .to(".menu-button", {
-        scale: 1.05,
-        duration: 0.3,
-        ease: "back.out(1.7)",
-      });
+    const menuHoverTl = gsap.timeline({ paused: true }).to(".menu-button", {
+      scale: 1.05,
+      duration: 0.3,
+      ease: "back.out(1.7)",
+    });
 
     const menuElement = document.querySelector(".menu-button");
     menuElement?.addEventListener("mouseenter", () => menuHoverTl.play());
@@ -79,7 +81,6 @@ export function Header() {
 
   useGSAP(
     () => {
-
       if (menuOpen) {
         // Show dropdown animation
         gsap.set(".dropdown-menu", { display: "flex" });
@@ -91,40 +92,48 @@ export function Header() {
           opacity: 1,
           duration: 0.5,
           ease: "power2.out",
-        }).fromTo(
-          ".nav-item",
-          {
-            opacity: 0,
-            y: -20,
-          },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.3,
-            stagger: 0.1,
-            ease: "back.out(1.7)",
-          },
-          "-=0.2"
-        ).fromTo(".nav-social-card", {
-            opacity: 0,
-            x: 50,
-            scale: 0.8,
-          },
-          {
-            opacity: 1,
-            x: 0,
-            scale: 1,
-            duration: 0.2,
-            stagger: 0.1,
-            ease: "back.out(1.7)",
-          },
-          "-=0.3"
-        ).to(".dropdown-menu",{
-          border: 4,
-          duration: 0.15,
-          ease: "power2.inOut"
-          
-        },"-=0.6")
+        })
+          .fromTo(
+            ".nav-item",
+            {
+              opacity: 0,
+              y: -20,
+            },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.3,
+              stagger: 0.1,
+              ease: "back.out(1.7)",
+            },
+            "-=0.2"
+          )
+          .fromTo(
+            ".nav-social-card",
+            {
+              opacity: 0,
+              x: 50,
+              scale: 0.8,
+            },
+            {
+              opacity: 1,
+              x: 0,
+              scale: 1,
+              duration: 0.2,
+              stagger: 0.1,
+              ease: "back.out(1.7)",
+            },
+            "-=0.3"
+          )
+          .to(
+            ".dropdown-menu",
+            {
+              border: 4,
+              duration: 0.15,
+              ease: "power2.inOut",
+            },
+            "-=0.6"
+          );
 
         // Menu icon rotation
         gsap.fromTo(
@@ -150,17 +159,23 @@ export function Header() {
           duration: 0.2,
           stagger: 0.05,
           ease: "power2.in",
-        }).to(".nav-item", {
-          opacity: 0,
-          y: -20,
-          duration: 0.2,
-          stagger: 0.05,
         })
-          .to(".dropdown-menu",{
-          border: 0,
-          duration: 0.15,
-          ease: "power2.inOut"
-        },"-=0.1").to(
+          .to(".nav-item", {
+            opacity: 0,
+            y: -20,
+            duration: 0.2,
+            stagger: 0.05,
+          })
+          .to(
+            ".dropdown-menu",
+            {
+              border: 0,
+              duration: 0.15,
+              ease: "power2.inOut",
+            },
+            "-=0.1"
+          )
+          .to(
             ".dropdown-menu",
             {
               y: "-100%",
@@ -196,7 +211,6 @@ export function Header() {
 
   return (
     <div className="fixed w-fit right-0  opacity-0 animate-header-my z-40 bg-transparent flex items-center justify-between p-4 py-5 md:px-10 rounded-xl overflow-hidden">
-
       {/* Menu Button */}
       <button
         onClick={toggleMenu}
@@ -204,9 +218,15 @@ export function Header() {
       >
         <div className="menu-icon ">
           {menuOpen ? (
-            <AiOutlineClose size={40} className="text-white -mr-1 group-hover:rotate-12" />
+            <AiOutlineClose
+              size={40}
+              className="text-white -mr-1 group-hover:rotate-12"
+            />
           ) : (
-            <HiOutlineMenuAlt3 size={40}   className="text-white -mr-1 group-hover:rotate-12"  />
+            <HiOutlineMenuAlt3
+              size={40}
+              className="text-white -mr-1 group-hover:rotate-12"
+            />
           )}
         </div>
         <span className="relative transition-colors  duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-emerald-500 after:transition-all after:duration-300 group-hover:after:w-full">
@@ -216,21 +236,27 @@ export function Header() {
 
       {/* Drop-down Glass Panel */}
       <div className=" dropdown-menu  fixed flex-col gap-8 justify-evenly items-center top-0 left-0 w-full h-screen z-20 bg-black  border-0 border-white shadow-lg">
-           {/* Logo */}
-      <div className="absolute left-5 top-5 md:top-8 md:left-8 flex items-center flex-col max-md:-space-y-1 space-x-2 z-30 text-xl cursor-pointer">
-        <span className=" md:text-3xl font-semibold font-dancing-script -rotate-6">M.Rehan_</span>
-        <span className=" md:text-3xl font-semibold font-dancing-script -rotate-6">_Amjad</span>
-      </div>
+        {/* Logo */}
+        <div className="absolute left-5 top-5 md:top-8 md:left-8 flex items-center flex-col max-md:-space-y-1 space-x-2 z-30 text-xl cursor-pointer">
+          <span className=" md:text-3xl font-semibold font-dancing-script -rotate-6">
+            M.Rehan_
+          </span>
+          <span className=" md:text-3xl font-semibold font-dancing-script -rotate-6">
+            _Amjad
+          </span>
+        </div>
         <div className="w-full h-full mt-14 flex flex-col md:flex-row justify-evenly p-8 md:items-center">
           <div className="flex flex-col items-start gap-2 md:gap-4 justify-center">
             {navItems.map((nav, idx) => (
-              <Link
-                href={nav.href}
-                key={idx}
-                
-              >
-                <div className={`nav-item flex  justify-center items-end gap-1 cursor-pointer group ${nav.name === "CONTACT" ? "text-green-600" : "text-gray-50"} hover:text-green-500`}>
-                  <span className={`relative text-6xl font-bold transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[4px] after:bg-green-700 after:transition-all after:duration-300 group-hover:after:w-full`}>
+              <Link href={nav.href} key={idx}>
+                <div
+                  className={`nav-item flex  justify-center items-end gap-1 cursor-pointer group ${
+                    nav.name === "CONTACT" ? "text-green-600" : "text-gray-50"
+                  } hover:text-green-500`}
+                >
+                  <span
+                    className={`relative text-6xl font-bold transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[4px] after:bg-green-700 after:transition-all after:duration-300 group-hover:after:w-full`}
+                  >
                     {nav.name}
                   </span>
                 </div>
@@ -239,29 +265,32 @@ export function Header() {
           </div>
           <div className="flex flex-row md:flex-col  gap-4 overflow-x-auto md:overflow-visible max-md:whitespace-nowrap max-md:mt-8">
             <SocialCard
-        plateFormName="Gmail"
-        plateFormIcon={SiGmail}
-        name="rehanamjad520@gmail.com"
-        userName=""
-        className="nav-social-card py-5 px-6  md:border-white border-3 rounded-md  lg:hover:border-red-400 min-w-80 w-full"
-        plateFormNameColor="max-md:text-red-600 md:group-hover:text-red-400"
-      />
-      <SocialCard
-        plateFormName="LinkedIn"
-        plateFormIcon={FaLinkedinIn}
-        name="M.Rehan Amjad"
-        userName="/in/mrehanamjad"
-        className="nav-social-card py-4 px-6 md:border-white border-3 rounded-md  lg:hover:border-sky-400 min-w-80 w-full"
-        plateFormNameColor="max-md:text-sky-700 md:group-hover:text-sky-500"
-      />
-      <SocialCard
-        plateFormIcon={FaGithub}
-        plateFormName="Github"
-        name="M.RehanAmjad"
-        userName="/mrehanamjad"
-        className="nav-social-card py-4 px-6  md:border-white border-3 rounded-md   lg:hover:border-white/30 min-w-80 w-full"
-        plateFormNameColor=" max-md:text-gray-200 md:group-hover:text-gray-300"
-      />
+              link="mailto:rehanamjad520@gmail.com"
+              plateFormName="Gmail"
+              plateFormIcon={SiGmail}
+              name="rehanamjad520@gmail.com"
+              userName=""
+              className="nav-social-card py-5 px-6  md:border-white border-3 rounded-md  lg:hover:border-red-400 min-w-80 w-full"
+              plateFormNameColor="max-md:text-red-600 md:group-hover:text-red-400"
+            />
+            <SocialCard
+              link="https://www.linkedin.com/in/mrehanamjad/"
+              plateFormName="LinkedIn"
+              plateFormIcon={FaLinkedinIn}
+              name="M.Rehan Amjad"
+              userName="/in/mrehanamjad"
+              className="nav-social-card py-4 px-6 md:border-white border-3 rounded-md  lg:hover:border-sky-400 min-w-80 w-full"
+              plateFormNameColor="max-md:text-sky-700 md:group-hover:text-sky-500"
+            />
+            <SocialCard
+              link="https://github.com/mrehanamjad"
+              plateFormIcon={FaGithub}
+              plateFormName="Github"
+              name="M.RehanAmjad"
+              userName="/mrehanamjad"
+              className="nav-social-card py-4 px-6  md:border-white border-3 rounded-md   lg:hover:border-white/30 min-w-80 w-full"
+              plateFormNameColor=" max-md:text-gray-200 md:group-hover:text-gray-300"
+            />
           </div>
         </div>
         <div></div>

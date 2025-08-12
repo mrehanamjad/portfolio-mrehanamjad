@@ -39,7 +39,7 @@ function Footer() {
 
           {/* Navigation */}
           <div className="flex gap-6 text-sm">
-            <a href="#projects" className="hover:text-white transition-colors">
+            <a href="/projects" className="hover:text-white transition-colors">
               Projects
             </a>
             <a href="#about" className="hover:text-white transition-colors">
