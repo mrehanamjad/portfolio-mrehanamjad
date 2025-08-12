@@ -1,5 +1,5 @@
 import { RiNextjsFill } from "react-icons/ri";
-import { SiAppwrite, SiExpress, SiFastapi, SiGreensock, SiSanity} from "react-icons/si";
+import { SiAppwrite, SiExpress, SiFastapi, SiGreensock, SiPostman, SiSanity} from "react-icons/si";
 import { IconType } from "react-icons";
 import {
   BiLogoCss3,
@@ -14,6 +14,7 @@ import {
   BiLogoTypescript,
 } from "react-icons/bi";
 import { IoMdSettings } from "react-icons/io";
+import { FaGitAlt } from "react-icons/fa";
 
 export interface skillI {
   name: string;
@@ -139,15 +140,29 @@ export const skillData:skillI[][] = [
       isImage: false,
       icon: SiAppwrite,
       imgSrc: "",
-      size: 48,
+      size: 40,
   },
   {
      name: "Sanity",
       isImage: false,
       icon: SiSanity,
       imgSrc: "",
-      size: 48,
+      size: 40,
   },
-
+   {
+     name: "Git",
+      isImage: false,
+      icon: FaGitAlt,
+      imgSrc: "",
+      size: 45,
+  },
+     {
+     name: "PostMan",
+      isImage: false,
+      icon: SiPostman,
+      imgSrc: "",
+      size: 45,
+  },
+  
 ]
 ];

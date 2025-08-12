@@ -154,7 +154,7 @@ function ProjectSection() {
             className="relative h-screen flex items-center justify-center"
           >
             <Link href={"/projects"}  className=" flex  justify-center items-end gap-1 cursor-pointer group hover:text-green-500" >
-            <span className={`relative text-2xl md:text-6xl font-bold italic transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[4px] after:bg-green-700 after:transition-all after:duration-300 group-hover:after:w-full flex gap-2`}>
+            <span className={`relative text-4xl md:text-6xl font-bold italic transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[4px] after:bg-green-700 after:transition-all after:duration-300 group-hover:after:w-full flex gap-2`}>
                     View All Projects <LuArrowUpRight className="text-2xl md:text-7xl group-hover:rotate-12 transition-transform" />
                   </span>
             </Link>
