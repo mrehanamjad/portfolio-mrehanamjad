@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, useState } from "react";
+import React, {  useState } from "react";
 import Container from "./Container";
 import SocialCardsSection from "./Socials/SocialCardsSection";
 
