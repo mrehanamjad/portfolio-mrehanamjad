@@ -109,5 +109,27 @@
     "live": "https://mrehanamjad.github.io/coding-quiz-app/",
     "github": "https://github.com/mrehanamjad/coding-quiz-app",
     "featured": false
+  },
+   {
+    "color": "bg-purple-600",
+    "title": "Blog Website ",
+    "description": "Figma to NextJs Blog Website",
+    "image": "/projects/blog-figma.png",
+    "technologies": ["NextJs","Typescript", "TailwindCss"],
+    "category": "FrontEnd",
+    "live": "https://blog-website-figma-nine.vercel.app/",
+    "github": "https://github.com/mrehanamjad/blog-website-figma",
+    "featured": false
+  },
+   {
+    "color": "bg-gradient-to-br from-violet-500 to-fuchsia-500 ",
+    "title": "E-commerce Landing Page",
+    "description": "Figma to NextJs ecommerce website landing page",
+    "image": "/projects/figma-to-ecommerce-landing-page.png",
+    "technologies": ["NextJs","Typescript", "TailwindCss"],
+    "category": "FrontEnd",
+    "live": "https://ecommerce-giac-milestone3-project.vercel.app/",
+    "github": "https://github.com/mrehanamjad/ecommerce-giac-milestone3-project",
+    "featured": false
   }
 ]

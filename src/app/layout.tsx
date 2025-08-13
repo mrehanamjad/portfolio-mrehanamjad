@@ -14,6 +14,59 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import Footer from "@/components/Footer";
 
+
+export const metadata: Metadata = {
+  title: "M. Rehan Amjad - Full Stack Developer & AI Enthusiast",
+  description:
+    "Portfolio of M. Rehan Amjad — a passionate Full Stack Developer & AI Enthusiast skilled in Next.js, React, TypeScript, and modern web technologies. Explore projects, skills, and experience.",
+  keywords: [
+    "M. Rehan Amjad",
+    "Full Stack Developer",
+    "AI Enthusiast",
+    "Next.js Developer",
+    "React Developer",
+    "TypeScript Developer",
+    "JavaScript Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Web Developer Portfolio",
+    "Sanity CMS",
+    "Freelance Developer",
+    "Software Engineer",
+  ],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  openGraph: {
+    title: "M. Rehan Amjad - Full Stack Developer & AI Enthusiast",
+    description:
+      "Explore the portfolio of M. Rehan Amjad — showcasing skills in Full Stack Development, AI, and cutting-edge web technologies.",
+    url: "https://rehanamjad.vercel.app",
+    siteName: "M. Rehan Amjad - Portfolio",
+    images: [
+      {
+        url: "https://avatars.githubusercontent.com/u/144995992?v=4",
+        width: 1200,
+        height: 630,
+        alt: "M. Rehan Amjad - Full Stack Developer & AI Enthusiast",
+      },
+    ],
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "M. Rehan Amjad - Full Stack Developer & AI Enthusiast",
+    description:
+      "Portfolio of M. Rehan Amjad — skilled in Full Stack Development, AI, and modern web technologies.",
+    images: ["https://avatars.githubusercontent.com/u/144995992?v=4"],
+    creator: "@m_rehanamjad", 
+  },
+};
+
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -62,10 +115,6 @@ const hostGrotesk = Host_Grotesk({
   variable: "--font-host-grotesk",
 })
 
-export const metadata: Metadata = {
-  title: "Full Stack Portfolio",
-  description: "Showcasing skills and projects",
-};
 
 export default function RootLayout({
   children,
