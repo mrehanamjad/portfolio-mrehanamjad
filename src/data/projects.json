@@ -113,7 +113,7 @@
    {
     "color": "bg-purple-600",
     "title": "Blog Website ",
-    "description": "Figma to NextJs Blog Website",
+    "description": "Figma to NextJs Blog Website.",
     "image": "/projects/blog-figma.png",
     "technologies": ["NextJs","Typescript", "TailwindCss"],
     "category": "FrontEnd",
@@ -124,7 +124,7 @@
    {
     "color": "bg-gradient-to-br from-violet-500 to-fuchsia-500 ",
     "title": "E-commerce Landing Page",
-    "description": "Figma to NextJs ecommerce website landing page",
+    "description": "Figma to NextJs ecommerce website landing page.",
     "image": "/projects/figma-to-ecommerce-landing-page.png",
     "technologies": ["NextJs","Typescript", "TailwindCss"],
     "category": "FrontEnd",

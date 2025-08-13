@@ -1,5 +1,13 @@
 import { RiNextjsFill } from "react-icons/ri";
-import { SiAppwrite, SiExpress, SiFastapi, SiGreensock, SiPostman, SiSanity} from "react-icons/si";
+import {
+  SiAppwrite,
+  SiExpress,
+  SiFastapi,
+  SiGreensock,
+  SiPostman,
+  SiSanity,
+  SiShopify,
+} from "react-icons/si";
 import { IconType } from "react-icons";
 import {
   BiLogoCss3,
@@ -24,7 +32,7 @@ export interface skillI {
   size: number;
 }
 
-export const skillData:skillI[][] = [
+export const skillData: skillI[][] = [
   [
     {
       name: "Python",
@@ -91,15 +99,16 @@ export const skillData:skillI[][] = [
       imgSrc: "",
       size: 48,
     },
-     {
+    {
       name: "GSAP",
       isImage: false,
       icon: SiGreensock,
       imgSrc: "",
       size: 48,
     },
-  ],[
-     {
+  ],
+  [
+    {
       name: "Node.js",
       isImage: false,
       icon: BiLogoNodejs,
@@ -120,7 +129,7 @@ export const skillData:skillI[][] = [
       imgSrc: "",
       size: 48,
     },
-     {
+    {
       name: "MongoDB",
       isImage: false,
       icon: BiLogoMongodb,
@@ -135,34 +144,41 @@ export const skillData:skillI[][] = [
       size: 48,
     },
   ],
-  [{
-     name: "AppWrite",
+  [
+    {
+      name: "Shopify",
       isImage: false,
-      icon: SiAppwrite,
+      icon: SiShopify,
       imgSrc: "",
-      size: 40,
-  },
-  {
-     name: "Sanity",
-      isImage: false,
-      icon: SiSanity,
-      imgSrc: "",
-      size: 40,
-  },
-   {
-     name: "Git",
+      size: 48,
+    },
+    {
+      name: "Git",
       isImage: false,
       icon: FaGitAlt,
       imgSrc: "",
       size: 45,
-  },
-     {
-     name: "PostMan",
+    },
+    {
+      name: "AppWrite",
+      isImage: false,
+      icon: SiAppwrite,
+      imgSrc: "",
+      size: 40,
+    },
+    {
+      name: "Sanity",
+      isImage: false,
+      icon: SiSanity,
+      imgSrc: "",
+      size: 40,
+    },
+    {
+      name: "PostMan",
       isImage: false,
       icon: SiPostman,
       imgSrc: "",
       size: 45,
-  },
-  
-]
+    },
+  ],
 ];
