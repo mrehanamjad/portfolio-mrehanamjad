@@ -23,7 +23,7 @@ function SkillsSection() {
         duration: 1,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: "#skill-section-main-container",
+          trigger: "#skills",
           start: "top top",
           toggleActions: "play none none none",
           once: true,
@@ -44,7 +44,7 @@ function SkillsSection() {
         duration: 0.8,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: "#skill-section-main-container",
+          trigger: "#skills",
           start: "top 80%",
           toggleActions: "play none play none",
           once: true,
@@ -66,7 +66,7 @@ function SkillsSection() {
         stagger: 0.05,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: "#skill-section-main-container",
+          trigger: "#skills",
           start: "top 60%",
         }
       }
@@ -88,7 +88,7 @@ function SkillsSection() {
         stagger: 0.05,
         ease: "back.out(1.7)",
         scrollTrigger: {
-          trigger: "#skill-section-main-container",
+          trigger: "#skills",
           start: "top 50%",
           toggleActions: "play none none none",
           once: true,
@@ -100,7 +100,7 @@ function SkillsSection() {
   return (
     <section className="w-full min-h-screen h-full text-white">
       <Container>
-        <div id="skill-section-main-container" className="h-full w-full ">
+        <div id="skills" className="h-full w-full ">
           <div className=" h-[60vh] flex flex-col justify-center items-center gap-4 md:gap-4">
             <h2 className="skills-main-heading text-4xl mb-4 text-outline-my font-semibold ">
               SKILLS

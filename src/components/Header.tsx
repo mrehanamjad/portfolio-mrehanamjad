@@ -15,10 +15,10 @@ export function Header() {
 
   const navItems = [
     { name: "HOME", href: "/", showOnDesktop: true },
-    { name: "ABOUT", href: "#about", showOnDesktop: true },
+    { name: "ABOUT", href: "/", showOnDesktop: true },
     {
       name: "SKILLS",
-      href: "#skill-section-main-container",
+      href: "/#skills",
       showOnDesktop: true,
     },
     { name: "PROJECTS", href: "/projects", showOnDesktop: true },
