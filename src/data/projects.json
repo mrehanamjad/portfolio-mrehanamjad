@@ -1,12 +1,30 @@
 [
   {
+    "color": "bg-gradient-to-br from-purple-700 to-indigo-600 text-gray-100",
+    "title": "Code2DSA",
+    "description": "🚀 An AI-powered LeetCode-like coding platform where users can solve DSA problems with real-time code execution, multi-test case submissions, authentication, submission history, and profile-based performance tracking. Includes an AI code reviewer that analyzes solutions, provides feedback, and suggests improvements 🤖📊.",
+    "image": "/projects/code2dsa.png",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "NextAuth",
+      "OpenAI Agent SDK",
+      "MongoDB",
+      "Tailwind CSS"
+    ],
+    "category": "Full-Stack",
+    "live": "https://code2dsa.vercel.app/",
+    "github": "https://github.com/mrehanamjad/code2dsa",
+    "featured": true
+  },
+  {
     "color": "bg-gradient-to-br from-blue-700 to-blue-600 text-gray-100",
     "title": "Reel Blast",
     "description": "🚀 A full-stack social platform where users can upload, explore, and engage with trending short-form videos, built for seamless video sharing and a dynamic user experience 🎥🔥. It includes features such as authentication, uploading, editing, deleting, and saving reels, as well as sharing and commenting on reels, creating user accounts, and following creators",
     "image": "/projects/reelblast.png",
     "technologies": [
       "Next.js",
-      "Mongodb",
+      "MongoDB",
       "TypeScript",
       "Tailwind CSS",
       "ImageKit"
@@ -110,23 +128,23 @@
     "github": "https://github.com/mrehanamjad/coding-quiz-app",
     "featured": false
   },
-   {
+  {
     "color": "bg-purple-600",
     "title": "Blog Website ",
     "description": "Figma to NextJs Blog Website.",
     "image": "/projects/blog-figma.png",
-    "technologies": ["NextJs","Typescript", "TailwindCss"],
+    "technologies": ["NextJs", "Typescript", "TailwindCss"],
     "category": "FrontEnd",
     "live": "https://blog-website-figma-nine.vercel.app/",
     "github": "https://github.com/mrehanamjad/blog-website-figma",
     "featured": false
   },
-   {
+  {
     "color": "bg-gradient-to-br from-violet-500 to-fuchsia-500 ",
     "title": "E-commerce Landing Page",
     "description": "Figma to NextJs ecommerce website landing page.",
     "image": "/projects/figma-to-ecommerce-landing-page.png",
-    "technologies": ["NextJs","Typescript", "TailwindCss"],
+    "technologies": ["NextJs", "Typescript", "TailwindCss"],
     "category": "FrontEnd",
     "live": "https://ecommerce-giac-milestone3-project.vercel.app/",
     "github": "https://github.com/mrehanamjad/ecommerce-giac-milestone3-project",
