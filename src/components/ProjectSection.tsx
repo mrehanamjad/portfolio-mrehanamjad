@@ -180,7 +180,7 @@ function ProjectSection() {
                     </div>
                   </div>
                     <div className="flex justify-end items-center px-2 gap-2 max-md:justify-between max-md:px-4 max-md:pb-4 pt-2 ">
-                      <Link 
+                    {card.github && <Link 
                       href={card.github} 
                       target="_blank"
                       className="flex items-center gap-2 px-4 py-2 rounded-lg 
@@ -190,8 +190,8 @@ function ProjectSection() {
                     >
                       <FaGithub className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-12 transition-transform" />
                       <span className="inline md:hidden">Code</span>
-                    </Link>
-                    <Link 
+                    </Link>}
+                  {card.live && <Link 
                     href={card.live}
                     target="_blank"
                       className="flex items-center gap-2 px-4 py-2 rounded-lg 
@@ -201,7 +201,7 @@ function ProjectSection() {
                     >
                       <span className="inline md:hidden">Live</span>
                       <LuArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-12 transition-transform" />
-                    </Link>
+                    </Link>}
                     </div>
                 </div>
                 <div className={`relative bg-black/20 w-full md:w-[65%] h-[40%] md:h-full rounded-xl max-md:order-1 md:flex-1 ${index % 2 === 0 ? "order-2" : "order-1"}`}>
