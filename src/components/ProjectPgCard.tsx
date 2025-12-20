@@ -18,7 +18,7 @@ function ProjectPgCard({
   image: string
   technologies: string[]
   category: string
-  live: string
+  live?: string
   github: string
 }) {
   return (

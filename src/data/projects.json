@@ -14,8 +14,24 @@
     ],
     "category": "Full-Stack",
     "live": "https://code2dsa.vercel.app/",
-    "github": "https://github.com/mrehanamjad/code2dsa",
+    "github": "https://github.com/mrehanamjad/Code2DSA-AI-Powered-Coding-Platform-Like-LeetCode",
     "featured": true
+  },
+    {
+    "color": "bg-gradient-to-br from-purple-700 to-indigo-600 text-gray-100",
+    "title": "DigiLibrary",
+    "description": "A scalable multi-vendor digital library backend enabling users to upload, publish, read, and purchase book PDFs (free & paid). Implemented JWT authentication, Stripe payments, secure file handling with ImageKit, book CRUD with advanced querying using MongoDB Aggregation and pagination.",
+    "image": "/projects/digilibrary-backend.png",
+    "technologies": [
+      "Expess.js",
+      "TypeScript",
+      "MongoDB",
+      "Stripe Pament Gateway",
+      "ImageKit"
+    ],
+    "category": "Backend",
+    "github": "https://github.com/mrehanamjad/DigiLibrary-MERN-Backend",
+    "featured": false
   },
   {
     "color": "bg-gradient-to-br from-blue-700 to-blue-600 text-gray-100",
