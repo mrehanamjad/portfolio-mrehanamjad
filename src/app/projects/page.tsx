@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { BiCode, BiGlobe } from "react-icons/bi";
+import { BiCode, BiGlobe, BiServer } from "react-icons/bi";
 import { CgSmartphone } from "react-icons/cg";
 import projects from "@/data/projects.json";
 import ProjectPgCard from "@/components/ProjectPgCard";
@@ -12,7 +12,7 @@ const Portfolio = () => {
     { key: "all", label: "All Projects", icon: BiGlobe },
     { key: "full-stack", label: "Full Stack", icon: BiCode },
     { key: "frontend", label: "Frontend", icon: CgSmartphone },
-    // { key: "backend", label: "Backend", icon: BiServer },
+    { key: "backend", label: "Backend", icon: BiServer },
     // { key: "mobile", label: "Mobile", icon: FiZap },
   ];
 
