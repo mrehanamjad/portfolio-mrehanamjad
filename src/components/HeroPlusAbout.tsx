@@ -153,7 +153,7 @@ function HeroPlusAbout() {
   className="aboutme-text text-center hidden text-balance text-gray-200 text-xl md:text-2xl lg:text-3xl px-1 md:px-10 font-semibold leading-relaxed"
 >
   <span className="aboutme-text-piece">
-    I'm an AI Engineer and Full-Stack Developer 👨‍💻
+    I&apos;m an AI Engineer and Full-Stack Developer 👨‍💻
   </span>
 
   <span className="aboutme-text-piece">

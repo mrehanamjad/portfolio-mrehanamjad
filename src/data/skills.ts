@@ -6,8 +6,6 @@ import {
   SiGreensock,
   SiLangchaincorporate,
   SiLanggraph,
-  SiPostman,
-  SiSanity,
   SiShopify,
 } from "react-icons/si";
 import { IconType } from "react-icons";
