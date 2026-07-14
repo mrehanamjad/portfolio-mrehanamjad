@@ -1,5 +1,5 @@
 [
-  {
+    {
   "color": "bg-gradient-to-br from-emerald-600 to-teal-700 text-gray-100",
   "title": "DocContextly",
   "description": "An AI-powered knowledge workspace (Google NotebookLM Clone) that lets users upload PDFs, DOCX, websites, YouTube videos, and more to chat with their content using RAG. Generate summaries, quizzes, flashcards, mind maps, slide decks, and AI podcast-style voiceovers with asynchronous background processing powered by Redis, ARQ, and Qdrant vector search.",
@@ -39,7 +39,24 @@
   "github": "https://github.com/mrehanamjad/Multi-Agent-AI-Researcher",
   "featured": true
 },
-  
+  {
+    "color": "bg-gradient-to-br from-purple-700 to-indigo-600 text-gray-100",
+    "title": "Code2DSA",
+    "description": "🚀 An AI-powered LeetCode-like coding platform where users can solve DSA problems with real-time code execution, multi-test case submissions, authentication, submission history, and profile-based performance tracking. Includes an AI code reviewer that analyzes solutions, provides feedback, and suggests improvements 🤖📊.",
+    "image": "/projects/code2dsa.png",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "NextAuth",
+      "OpenAI Agent SDK",
+      "MongoDB",
+      "Tailwind CSS"
+    ],
+    "category": "Full-Stack",
+    "live": "https://code2dsa.vercel.app/",
+    "github": "https://github.com/mrehanamjad/Code2DSA-AI-Powered-Coding-Platform-Like-LeetCode",
+    "featured": true
+  },
     {
     "color": "bg-gradient-to-br from-purple-700 to-indigo-600 text-gray-100",
     "title": "DigiLibrary",
@@ -88,7 +105,7 @@
     "category": "Full-Stack",
     "live": "https://fa-editor-ai.vercel.app/",
     "github": "https://github.com/mrehanamjad/AI-Powered-Finite-Automata-Editor-Simulator",
-    "featured": true
+    "featured": false
   },
   {
     "color": "bg-gradient-to-br from-indigo-500 to-indigo-600",
@@ -121,7 +138,7 @@
     "category": "FrontEnd",
     "live": "https://art-school-site.vercel.app/",
     "github": "https://github.com/mrehanamjad/social-bloging-website",
-    "featured": true
+    "featured": false
   },
   {
     "color": "bg-gradient-to-br from-purple-600 to-purple-800 text-gray-",
