@@ -13,33 +13,33 @@ gsap.registerPlugin(SplitText);
 function HeroPlusAbout() {
   useGSAP(() => {
 
-    const split = SplitText.create(".description",{
-      type:"chars,words"
+    const split = SplitText.create(".description", {
+      type: "chars,words"
     })
 
 
     const tl = gsap.timeline();
-    tl.to(".greeding",{
-      opacity:1,
-      y:0,
-      duration:0.6,
-    }).to(".name",{
-      opacity:1,
-      y:0,
-      duration:0.6,
-    }).to(".subtitle",{
-      opacity:1,
-      y:0,
-      duration:0.6,
+    tl.to(".greeding", {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+    }).to(".name", {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+    }).to(".subtitle", {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
     }).from(split.words, {
-        opacity: 0,
-        y: 100,
-        stagger: 0.05,
-        duration: 0.3,
-        ease: "power2.out",
-      }).to(".h-line",{
+      opacity: 0,
+      y: 100,
+      stagger: 0.05,
+      duration: 0.3,
+      ease: "power2.out",
+    }).to(".h-line", {
       width: "50%",
-      duration:0.6,
+      duration: 0.6,
     }).to("#hero-img", {
       y: "-50%",
       duration: 2,
@@ -49,7 +49,7 @@ function HeroPlusAbout() {
     });
   });
 
-  
+
   useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -149,18 +149,29 @@ function HeroPlusAbout() {
               <span>ME</span>
             </div>
             <p
-              id="about-txt"
-              className="aboutme-text text-center hidden  text-balance text-gray-200 text-xl md:text-2xl lg:text-3xl font-semibold leading-relaxed"
-            >
-             <span className="aboutme-text-piece">I&apos;m a passionate Full-Stack Developer 👨‍💻 and AI </span>
-              <span className="aboutme-text-piece">enthusiast ✨ focused on crafting elegant, fast, and </span>
-              <span className="aboutme-text-piece">accessible digital experiences 🚀. With tools</span>
-              <span className="aboutme-text-piece"> like Next.js, React, and Tailwind CSS,</span>
-              <span className="aboutme-text-piece">
-                I turn ideas into reality 💡🌱 — merging 🔀 innovation, performance, and
-                design.
-              </span>
-            </p>
+  id="about-txt"
+  className="aboutme-text text-center hidden text-balance text-gray-200 text-xl md:text-2xl lg:text-3xl px-1 md:px-10 font-semibold leading-relaxed"
+>
+  <span className="aboutme-text-piece">
+    I'm an AI Engineer and Full-Stack Developer 👨‍💻
+  </span>
+
+  <span className="aboutme-text-piece">
+    specializing in production-ready LLM applications, Agentic AI,
+    Retrieval-Augmented Generation (RAG), and modern web development.
+  </span>
+
+  <span className="aboutme-text-piece">
+    I build scalable systems with Python, FastAPI, Next.js,
+    React, and TypeScript, creating AI experiences that are reliable,
+    responsive, and user-focused.
+  </span>
+
+  <span className="aboutme-text-piece">
+    Passionate about turning complex AI concepts into products that
+    people genuinely enjoy using. 🚀
+  </span>
+</p>
           </div>
         </div>
 
@@ -196,11 +207,10 @@ function HeroPlusAbout() {
           </h1>
           <div className="h-line  z-1 h-[1px] w-0 bg-zinc-400 my-3 md:my-6 "></div>
           <h2 className="subtitle translate-y-16 opacity-0 z-1 text-3xl md:text-5xl  uppercase  text-white font-semibold">
-            Full Stack Developer
+             AI Engineer • Full-Stack Developer
           </h2>
           <p className="description  z-1 text-sm md:text-xl leading-relaxed w-4/5 md:w-2/3 font-light text-center text-balance">
-            I build beautiful, functional, and user-friendly websites using
-            modern tech. Let&apos;s turn ideas into reality.
+            I build scalable AI systems and full-stack applications that solve real-world problems.
           </p>
           <div className="flex items-center max-md:flex-col max-md:gap-4 justify-center gap-6 mt-8">
             <Link href={"/#contact"}>

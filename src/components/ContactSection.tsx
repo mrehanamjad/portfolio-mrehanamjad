@@ -36,7 +36,7 @@ const ContactSection = () => {
       return;
     }
 
-    if(formData.email.includes("@") || formData.email.includes(".")) {
+    if(!formData.email.includes("@") || !formData.email.includes(".")) {
         setLoading(false);
       setStatus("⚠️ Invalid Email address");
       return;

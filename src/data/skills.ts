@@ -4,6 +4,8 @@ import {
   SiExpress,
   SiFastapi,
   SiGreensock,
+  SiLangchaincorporate,
+  SiLanggraph,
   SiPostman,
   SiSanity,
   SiShopify,
@@ -15,14 +17,18 @@ import {
   BiLogoJavascript,
   BiLogoMongodb,
   BiLogoNodejs,
+  BiLogoPostgresql,
   BiLogoPython,
   BiLogoReact,
   BiLogoRedux,
   BiLogoTailwindCss,
   BiLogoTypescript,
+  BiVector,
 } from "react-icons/bi";
 import { IoMdSettings } from "react-icons/io";
 import { FaGitAlt } from "react-icons/fa";
+import { AiOutlineDocker, AiOutlineOpenAI } from "react-icons/ai";
+import { PiFileSqlFill } from "react-icons/pi";
 
 export interface skillI {
   name: string;
@@ -66,6 +72,29 @@ export const skillData: skillI[][] = [
       name: "Css",
       isImage: false,
       icon: BiLogoCss3,
+      imgSrc: "",
+      size: 48,
+    },
+  ],[
+    // AI Skills
+    {
+     name: "LangChain",
+      isImage: false,
+      icon: SiLangchaincorporate,
+      imgSrc: "",
+      size: 48,
+    },
+    {
+     name: "LangGraph",
+      isImage: false,
+      icon: SiLanggraph,
+      imgSrc: "",
+      size: 48,
+    },
+      {
+     name: "Agent SDK",
+      isImage: false,
+      icon: AiOutlineOpenAI,
       imgSrc: "",
       size: 48,
     },
@@ -130,13 +159,6 @@ export const skillData: skillI[][] = [
       size: 48,
     },
     {
-      name: "MongoDB",
-      isImage: false,
-      icon: BiLogoMongodb,
-      imgSrc: "",
-      size: 48,
-    },
-    {
       name: "Rest Api",
       isImage: false,
       icon: IoMdSettings,
@@ -145,6 +167,44 @@ export const skillData: skillI[][] = [
     },
   ],
   [
+    {
+      name: "",
+      isImage: false,
+      icon: PiFileSqlFill,
+      imgSrc: "",
+      size: 48,
+    },
+    {
+      name: "Postgresql",
+      isImage: false,
+      icon: BiLogoPostgresql,
+      imgSrc: "",
+      size: 48,
+    },
+    {
+      name: "MongoDB",
+      isImage: false,
+      icon: BiLogoMongodb,
+      imgSrc: "",
+      size: 48,
+    },
+    
+     {
+      name: "Vector Databases",
+      isImage: false,
+      icon: BiVector,
+      imgSrc: "",
+      size: 48,
+    },
+  ],
+  [
+    {
+      name: "Docker",
+      isImage: false,
+      icon: AiOutlineDocker,
+      imgSrc: "",
+      size: 48,
+    },
     {
       name: "Shopify",
       isImage: false,
@@ -165,20 +225,6 @@ export const skillData: skillI[][] = [
       icon: SiAppwrite,
       imgSrc: "",
       size: 40,
-    },
-    {
-      name: "Sanity",
-      isImage: false,
-      icon: SiSanity,
-      imgSrc: "",
-      size: 40,
-    },
-    {
-      name: "PostMan",
-      isImage: false,
-      icon: SiPostman,
-      imgSrc: "",
-      size: 45,
-    },
+    }
   ],
 ];
