@@ -6,6 +6,8 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import gsap from "gsap";
 import Link from "next/link";
+import { BoxRevealSubtitle, BoxRevealText } from "./text-animations/BoxRevealText";
+import TypeWrite from "./text-animations/TypeWrite";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
@@ -206,9 +208,16 @@ function HeroPlusAbout() {
             M.Rehan Amjad{" "}
           </h1>
           <div className="h-line  z-1 h-[1px] w-0 bg-zinc-400 my-3 md:my-6 "></div>
-          <h2 className="subtitle translate-y-16 opacity-0 z-1 text-3xl md:text-5xl  uppercase  text-white font-semibold">
+          {/* <h2 className="subtitle translate-y-16 opacity-0 z-1 text-2xl md:text-5xl  uppercase  text-white font-semibold">
              AI Engineer • Full-Stack Developer
-          </h2>
+          </h2> */}
+          {/* <BoxRevealText delay={1}>
+            <h2 className="subtitle translate-y-16 opacity-0 z-1 text-2xl md:text-5xl  uppercase  text-white font-semibold">
+              AI Engineer • Full-Stack Developer
+            </h2>
+          </BoxRevealText> */}
+          <TypeWrite texts={["AI Engineer", "Full-Stack Developer"]}
+          />
           <p className="description  z-1 text-sm md:text-xl leading-relaxed w-4/5 md:w-2/3 font-light text-center text-balance">
             I build scalable AI systems and full-stack applications that solve real-world problems.
           </p>
