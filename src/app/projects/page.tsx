@@ -4,12 +4,14 @@ import { BiCode, BiGlobe, BiServer } from "react-icons/bi";
 import { CgSmartphone } from "react-icons/cg";
 import projects from "@/data/projects.json";
 import ProjectPgCard from "@/components/ProjectPgCard";
+import { SiClaudecode } from "react-icons/si";
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("all");
 
   const filters = [
     { key: "all", label: "All Projects", icon: BiGlobe },
+    { key: "gen ai full-stack", label: "Gen AI", icon: SiClaudecode },
     { key: "full-stack", label: "Full Stack", icon: BiCode },
     { key: "frontend", label: "Frontend", icon: CgSmartphone },
     { key: "backend", label: "Backend", icon: BiServer },
