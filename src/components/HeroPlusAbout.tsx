@@ -6,7 +6,6 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import gsap from "gsap";
 import Link from "next/link";
-import { BoxRevealSubtitle, BoxRevealText } from "./text-animations/BoxRevealText";
 import TypeWrite from "./text-animations/TypeWrite";
 
 gsap.registerPlugin(ScrollTrigger);
