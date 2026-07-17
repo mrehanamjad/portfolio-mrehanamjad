@@ -789,12 +789,7 @@ function ProjectSection() {
                           loading={index === 0 ? "eager" : "lazy"}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/10" />
-                        <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
-                          <span className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono font-medium bg-black/40 backdrop-blur-md rounded-full border border-white/15 text-white/80">
-                            <span className={`h-1.5 w-1.5 rounded-full ${card.color}`} />
-                            {card.category}
-                          </span>
-                        </div>
+
                       </div>
                     </div>
                   </div>
