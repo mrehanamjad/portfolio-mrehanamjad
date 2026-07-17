@@ -16,54 +16,103 @@ import Footer from "@/components/Footer";
 
 
 export const metadata: Metadata = {
-  title: "M. Rehan Amjad - Full Stack Developer & AI Enthusiast",
+  title: "M. Rehan Amjad | AI Engineer & Full-Stack Developer",
   description:
-    "Portfolio of M. Rehan Amjad — a passionate Full Stack Developer & AI Enthusiast skilled in Next.js, React, TypeScript, and modern web technologies. Explore projects, skills, and experience.",
+    "Portfolio of M. Rehan Amjad — AI Engineer and Full-Stack Developer specializing in production-ready LLM applications, Agentic AI, Retrieval-Augmented Generation (RAG), FastAPI, Next.js, React, and TypeScript. Explore projects, skills, and experience.",
+
   keywords: [
     "M. Rehan Amjad",
+    "Muhammad Rehan Amjad",
+    "AI Engineer",
     "Full Stack Developer",
-    "AI Enthusiast",
+    "LLM Engineer",
+    "Agentic AI",
+    "Generative AI",
+    "Retrieval Augmented Generation",
+    "RAG",
+    "LangChain",
+    "LangGraph",
+    "OpenAI Agent SDK",
+    "FastAPI",
+    "Python Developer",
     "Next.js Developer",
     "React Developer",
     "TypeScript Developer",
-    "JavaScript Developer",
-    "Frontend Developer",
-    "Backend Developer",
-    "Web Developer Portfolio",
-    "Sanity CMS",
-    "Freelance Developer",
     "Software Engineer",
+    "Machine Learning Engineer",
+    "AI Portfolio",
+    "Full Stack Portfolio",
+    "Web Developer Portfolio",
+    "Karachi Pakistan",
   ],
+
+  authors: [
+    {
+      name: "M. Rehan Amjad",
+      url: "https://rehanamjad.vercel.app",
+    },
+  ],
+
+  creator: "M. Rehan Amjad",
+  publisher: "M. Rehan Amjad",
+
+  metadataBase: new URL("https://rehanamjad.vercel.app"),
+
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
+
   openGraph: {
-    title: "M. Rehan Amjad - Full Stack Developer & AI Enthusiast",
+    title: "M. Rehan Amjad | AI Engineer & Full-Stack Developer",
     description:
-      "Explore the portfolio of M. Rehan Amjad — showcasing skills in Full Stack Development, AI, and cutting-edge web technologies.",
+      "Building production-ready AI applications with LLMs, Agentic AI, RAG, FastAPI, Next.js, React, and TypeScript. Explore my projects, skills, and experience.",
+
     url: "https://rehanamjad.vercel.app",
-    siteName: "M. Rehan Amjad - Portfolio",
+    siteName: "M. Rehan Amjad Portfolio",
+    locale: "en_US",
+    type: "website",
+
     images: [
       {
         url: "https://avatars.githubusercontent.com/u/144995992?v=4",
         width: 1200,
         height: 630,
-        alt: "M. Rehan Amjad - Full Stack Developer & AI Enthusiast",
+        alt: "M. Rehan Amjad | AI Engineer & Full-Stack Developer",
       },
     ],
-    type: "website",
-    locale: "en_US",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "M. Rehan Amjad - Full Stack Developer & AI Enthusiast",
+    title: "M. Rehan Amjad | AI Engineer & Full-Stack Developer",
     description:
-      "Portfolio of M. Rehan Amjad — skilled in Full Stack Development, AI, and modern web technologies.",
-    images: ["https://avatars.githubusercontent.com/u/144995992?v=4"],
-    creator: "@m_rehanamjad", 
+      "AI Engineer building production-ready LLM, Agentic AI, and RAG applications with FastAPI, Next.js, React, and TypeScript.",
+
+    creator: "@m_rehanamjad",
+    images: [
+      "https://avatars.githubusercontent.com/u/144995992?v=4",
+    ],
   },
+
+  category: "technology",
 };
 
 

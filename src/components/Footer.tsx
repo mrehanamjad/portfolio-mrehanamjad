@@ -52,7 +52,7 @@ function Footer() {
           <div>
             <h2 className="text-2xl font-bold text-white">M.Rehan Amjad</h2>
             <p className="text text-gray-400 mt-0.5">
-              Full-Stack Developer & AI Enthusiast
+              AI Engineer & Full-Stack Developer
             </p>
             <p className="text-sm text-gray-500 mt-4">
               © {new Date().getFullYear()} Rehan Amjad. All rights reserved.
