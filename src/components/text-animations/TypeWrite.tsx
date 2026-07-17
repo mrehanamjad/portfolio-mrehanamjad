@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 
-function TypeWrite({texts}:{texts:string[]}) {
+function TypeWrite({texts,className=" "}: { texts: string[]; className?: string }) {
     const [currentText, setCurrentText] = useState("")
     const [currentIndex, setCurrentIndex] = useState(0)
     const [isDeleting, setIsDeleting] = useState(false)
@@ -50,7 +50,7 @@ function TypeWrite({texts}:{texts:string[]}) {
     return (
         <div
             ref={containerRef}
-            className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-8 text-gray-100 h-12 flex items-center"
+            className={`text-2xl md:text-3xl lg:text-4xl font-semibold mb-8 text-gray-100 h-12 flex items-center  ${className}`}
         >
             {currentText}
             <span className="ml-1 animate-pulse text-green-400">|</span>
