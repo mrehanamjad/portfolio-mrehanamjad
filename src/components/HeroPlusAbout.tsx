@@ -206,7 +206,7 @@ function HeroPlusAbout() {
           <h1 className="name translate-y-16 opacity-0 z-1 text-5xl md:text-8xl lg:text-9xl uppercase font-bold">
             M.Rehan Amjad{" "}
           </h1>
-          <div className="h-line  z-1 h-[1px] w-0 bg-zinc-400 my-3 md:my-6 "></div>
+          <div className="h-line  z-1 h-[1px] w-0 bg-zinc-400 my-3 md:my-6 mb-1"></div>
           {/* <h2 className="subtitle translate-y-16 opacity-0 z-1 text-2xl md:text-5xl  uppercase  text-white font-semibold">
              AI Engineer
           </h2> */}
@@ -215,7 +215,7 @@ function HeroPlusAbout() {
               AI Engineer • Full-Stack Developer
             </h2>
           </BoxRevealText> */}
-          <TypeWrite texts={["AI Engineer", "Full-Stack Developer"]}  className="text-3xl md:text-5xl lg:text-6xl uppercase  text-white font-semibold mb-1"/>
+          <TypeWrite texts={["AI Engineer", "Full-Stack Developer"]}  className="text-3xl md:text-5xl lg:text-6xl uppercase  text-white font-semibold max-sm:mb-0"/>
           <p className="description  z-1 text-sm md:text-xl leading-relaxed w-4/5 md:w-2/3 font-light text-center text-balance">
             I build scalable AI systems and full-stack applications that solve real-world problems.
           </p>
