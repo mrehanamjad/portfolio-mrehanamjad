@@ -13,6 +13,7 @@ import {
 import "./globals.css";
 import { Header } from "@/components/Header";
 import Footer from "@/components/Footer";
+import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 
 
 export const metadata: Metadata = {
@@ -177,9 +178,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${inter.variable} ${raleway.variable} ${hubotSans.variable} ${dancingScript.variable} ${oswald.variable} ${hostGrotesk.variable}`}
     >
       <body className="font-inter antialiased bg-[#131313]">
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <SmoothScrollProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </SmoothScrollProvider>
       </body>
     </html>
   );
