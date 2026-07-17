@@ -14,7 +14,7 @@
     "Redis",
     "TypeScript"
   ],
-  "category": "AI Full-Stack",
+  "category": "Gen AI Full-Stack",
   "live": "https://doccontextly.vercel.app/",
   "github": "https://github.com/mrehanamjad/DocContextly-AI-notebooklm-clone",
   "featured": true
